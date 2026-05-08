@@ -1,0 +1,21 @@
+DATE,TIMESTAMP,LOCATION,ENERGY_SOURCE,MEASURE,UNIT_OF_MEASURE,INTERVAL,VALUE
+,,Tower BTC,electricity,offices 10th floor (east),kWh,H,1.0
+2021/05/04,,Tower BTC,electricity,offices 10th floor (east),kWh,H,49.0
+,,Logistic centre,electricity,light inscriptions ,kWh,H,5.0
+,2021/11/28 02:52,Tower BTC,electricity,light inscriptions ,kWh,H,1551.0
+,,Tower BTC,water supply (network),lighting -2nd floor,kWh,H,0.0
+,2021/07/07 03:01,Logistic centre,district heating,billing meter (network),kWh,H,48.0
+,,Tower BTC,electricity,offices 9th floor (east),kWh,H,38.0
+,2021/04/23 02:15,Atlantis waterpark,electricity,Warehouse G billing meter,kWh,H,179.0
+2021/03/20,,Atlantis waterpark,electricity,offices 3rd floor (east),kWh,H,82.0
+,2021/04/04 12:36,Tower BTC,electricity,offices 3rd floor (west),kWh,H,4249.0
+,2021/09/30 15:48,Tower BTC,electricity,offices 10th floor (east),kWh,H,0.0
+,,Tower BTC,electricity,Logistics center main counter,kWh,H,68.0
+,2021/06/10 12:20,Atlantis waterpark,electricity,offices 3rd floor (east),kWh,H,40.0
+,,Tower BTC,electricity,cooling offices,kWh,H,0.0
+2021/09/22,2021/09/22 07:46,Logistic centre,electricity,offices 9th floor (east),kWh,H,0.0
+,2021/08/01 19:40,Atlantis waterpark,electricity,billing meter,kWh,H,0.0
+2021/07/28,2021/07/29 04:31,Tower BTC,electricity,cooling offices,kWh,H,0.0
+,,Tower BTC,electricity,chiller IT rooms #1,kWh,H,32.0
+,2021/07/04 02:51,Tower BTC,electricity,light inscriptions ,kWh,H,0.0
+2021/09/16,,Tower BTC,electricity,cooling offices,kWh,H,655.0

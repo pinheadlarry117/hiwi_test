@@ -1,0 +1,21 @@
+DATE,TIMESTAMP,LOCATION,ENERGY_SOURCE,MEASURE,UNIT_OF_MEASURE,INTERVAL,VALUE
+2021/10/24,2021/10/12 06:20,Logistic centre,electricity,Warehouse G billing meter,kWh,H,4927.0
+2021/05/09,2021/04/05 21:57,Logistic centre,electricity,Warehouse G billing meter,kWh,H,79.0
+2021/09/24,2021/08/30 21:29,Logistic centre,electricity,Logistics center main counter,kWh,H,1181.0
+2021/11/29,2021/11/29 19:46,Logistic centre,electricity,Logistics center main counter,kWh,H,1069.0
+2021/09/25,2021/09/24 23:13,Logistic centre,electricity,Warehouse G billing meter,kWh,H,8700.0
+2021/07/10,2021/06/24 12:03,Logistic centre,electricity,Logistics center main counter,kWh,H,11726.0
+2021/05/19,2021/04/10 17:24,Logistic centre,electricity,Logistics center main counter,kWh,H,1537.0
+2021/03/22,2021/03/20 19:21,Logistic centre,electricity,Warehouse G billing meter,kWh,H,388.0
+2021/02/26,2021/01/27 12:21,Logistic centre,electricity,Logistics center main counter,kWh,H,1197.0
+2021/03/22,2021/02/05 12:13,Logistic centre,electricity,warehouse G,kWh,H,31431.0
+2021/11/07,2021/11/12 06:32,Logistic centre,electricity,Warehouse G billing meter,kWh,H,3404.0
+2021/09/27,2021/08/01 22:38,Logistic centre,electricity,Warehouse G billing meter,kWh,H,11444.0
+2021/06/18,2021/05/31 21:08,Logistic centre,electricity,Logistics center main counter,kWh,H,106.0
+2021/07/23,2021/06/02 08:15,Logistic centre,electricity,Logistics center main counter,kWh,H,75.0
+2021/11/05,2021/11/13 16:06,Logistic centre,electricity,Logistics center main counter,kWh,H,102.0
+2021/08/16,2021/08/21 10:47,Logistic centre,electricity,Warehouse G billing meter,kWh,H,6549.0
+2021/10/14,2021/09/11 01:43,Logistic centre,electricity,warehouse G,kWh,H,74.0
+2021/04/21,2021/04/10 04:29,Logistic centre,electricity,warehouse G,kWh,H,864.0
+2021/07/24,2021/07/16 18:55,Logistic centre,electricity,warehouse G,kWh,H,1686.0
+2021/11/18,2021/11/13 18:34,Logistic centre,electricity,Warehouse G billing meter,kWh,H,74.0
