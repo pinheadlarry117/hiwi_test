@@ -12,6 +12,11 @@ from faker import Faker
 INPUT_FILE = Path(r"C:\Users\Administrator\Downloads\sampledata_short.csv")
 #INPUT_FILE = Path(r"C:\Users\Administrator\Downloads\sampledata.csv")
 
+location = "Atlantis waterpark"
+energy = "electricity"
+
+
+
 def save_original_data(
     data: pd.DataFrame,
     results_root: Path,
@@ -33,8 +38,9 @@ def save_original_data(
 def save_filtered_data(
     data: pd.DataFrame,
     results_root: Path,
-    filename: str = f"{INPUT_FILE.stem.replace(' ', '_')}_filtered.csv"
-) -> Path:
+    filename: str = (
+    f"{INPUT_FILE.stem.replace(' ', '_')}_"
+    f"{location.replace(' ', '')}_{energy.strip()}_filtered.csv")) -> Path:
     """
     Save the filtered input dataset under test_results/filtered_data.
 
@@ -87,6 +93,12 @@ data = pd.read_csv(INPUT_FILE)
 saved_original_path = save_original_data(data, RESULTS_ROOT)
 print(f"✅ Original data saved to: {saved_original_path}")
 
+
+subset = data[
+    (data["LOCATION"] == location) &
+    (data["ENERGY_SOURCE"] == energy)
+]
+
 """
 Faker.seed(0)
 fake = Faker()
@@ -99,13 +111,7 @@ data["_Project"] = new_values
 print(data["_Project"])
 """
 
-location = "Logistic centre"
-energy = "electricity"
 
-subset = data[
-    (data["LOCATION"] == location) &
-    (data["ENERGY_SOURCE"] == energy)
-]
 
 saved_filtered_path = save_filtered_data(subset, RESULTS_ROOT)
 print(f"✅ Filtered data saved to: {saved_filtered_path}")
@@ -184,6 +190,8 @@ synthetic_gauss.to_csv(
 )
 
 gauss_quality_report = evaluate_quality(data, synthetic_gauss, metadata)
+print(data)
+print(synthetic_gauss)
 gauss_score = gauss_quality_report.get_score()
 pd.DataFrame(
     {"gaussian_quality_score": [gauss_score]}
