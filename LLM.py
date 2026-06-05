@@ -7,7 +7,7 @@ import json
 INPUT_FILE3 = r"C:\Users\Administrator\Downloads\weather_data.json"
 INPUT_FILE4 = r"C:\Users\Administrator\Downloads\feeder_metadata.csv"
 
-
+#
 #file_path = r"C:\Users\Administrator\Downloads\weather_data.parquet"
 #df = pd.read_parquet(file_path)
 
@@ -19,8 +19,8 @@ INPUT_FILE4 = r"C:\Users\Administrator\Downloads\feeder_metadata.csv"
 #data2 = pd.read_csv(INPUT_FILE2)
 #table2_test = data2.to_csv(index=False)
 
-data3 = pd.read_json(INPUT_FILE3, orient="records")
-table3_test = data3.head(100).to_csv(index=False)
+#data3 = pd.read_json(INPUT_FILE3, orient="records")
+#table3_test = data3.head(100).to_csv(index=False)
 
 
 data4 = pd.read_csv(INPUT_FILE4)
@@ -36,20 +36,18 @@ client = OpenAI(base_url="https://ollama.fit.fraunhofer.de/api",
                 api_key="sk-9c747e879bbd494f93fbd30130261b54") 
 
 response = client.chat.completions.create(
-    model="gpt-oss:20b", # Ein verfügbares Modell wählen
+    model="elmtex-dighe-dsai-2024-11:8b", # Ein verfügbares Modell wählen
     
     messages=[
         {
             "role": "user",
             "content": f"""
             Hier ist eine Tabelle im CSV-Format:
-            {table3_test}
+            {table4_test}
             Kannst du diese Tabelle lesen und mir sagen, welche Spalten sie enthält?
-            Hier ist eine Website, die die Information für anonymisieren von Daten enthält: https://w3c.github.io/dpv/2.3/tech/#dpv-classes
-            Sag mir um welche data type es es sich für diese Website handelt.
-            i only want you to give me the list of columns that you think should be anonymized based on the website and tell me why 
             Gib mir eine Liste der Spalten in dieser Tabelle, die ich anonymisieren sollte. Und gib mir ein confidence score in percentage für jede Spalte, damit ich entscheiden kann, welche Spalten ich anonymisieren möchte.
             Und auch die Gruende, warum du denkst, dass diese Spalten anonymisiert werden sollten.
+
             """
         }
     ],
@@ -59,3 +57,16 @@ print(response.choices[0].message.content)
 
 
 
+"""
+Hier ist eine Website, die die Information für anonymisieren von Daten enthält: https://w3c.github.io/dpv/2.3/tech/#dpv-classes
+            Sag mir um welche data type es es sich für diese Website handelt.
+
+ Kannst du diese Tabelle lesen und mir sagen, welche Spalten sie enthält?
+            Gib mir eine Liste der Spalten in dieser Tabelle, die ich anonymisieren sollte. Und gib mir ein confidence score in percentage für jede Spalte, damit ich entscheiden kann, welche Spalten ich anonymisieren möchte.
+            Und auch die Gruende, warum du denkst, dass diese Spalten anonymisiert werden sollten.
+
+            
+        Base on the standing of the content, which combination of columns do you think is more sensitive and should be anonymized together, 
+        and give me the confidence score for this combination in percentage, and also give me the reason why you think this combination is more sensitive than others.
+        Give me seperate output of the 2 questions.
+"""
