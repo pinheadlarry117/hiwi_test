@@ -30,7 +30,7 @@ data4_markdown = pd.read_csv(INPUT_FILE4, nrows=10)
 table4_test = data4.to_dict(orient="records")
 table4_test_markdown = data4_markdown.to_dict(orient="records")
 column_name = data4.columns.tolist()  # Get the first column name
-
+#print(table4_test_markdown)
 #print(table4_test)
 #columns = str(list(data3.columns))
 #print(columns)
@@ -40,7 +40,7 @@ client = OpenAI(base_url="https://chat.kiconnect.nrw/api/v1",
                 api_key="6a3b82bbcc5fd5a016bda53f:Mayea505/CJVe/r+dv22j1plpm89Ze2mQfwxx0QclCA=") 
 
 response = client.chat.completions.create(
-    model="gpt-5.4-mini", # Ein verfügbares Modell wählen
+    model="gpt-5.2", # Ein verfügbares Modell wählen
     
     messages=[
         {
@@ -48,7 +48,7 @@ response = client.chat.completions.create(
             "content": f"""
             You are a knowledgeable assistant who helps to decide the columns to be anonymized. You have expert knowledge in DCAT, DPV.
             
-            We want to determine the best fitting ontology class (or class path if multiple levels are considered) for the following column: '{column_name}'.
+            We want you to read the table {table4_test_markdown}'.
             Instructions:
             1. Review the column name and the example data.
             2. Based data, give the confidence score in percentage for all the columns.
