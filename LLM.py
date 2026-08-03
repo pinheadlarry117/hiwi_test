@@ -37,29 +37,29 @@ column_name = data4.columns.tolist()  # Get the first column name
 
 
 client = OpenAI(base_url="https://chat.kiconnect.nrw/api/v1",
-                api_key="6a3b82bbcc5fd5a016bda53f:Mayea505/CJVe/r+dv22j1plpm89Ze2mQfwxx0QclCA=") 
+                api_key="6a44d0a3040b4bc18af2057f:bhMgV3VHbSlAcFGgpR1oUkLSuwNuL0nYLQeO4kOlZX8=") 
 
 response = client.chat.completions.create(
-    model="gpt-5.2", # Ein verfügbares Modell wählen
+    model="gpt-5.4-mini", # Ein verfügbares Modell wählen gpt-oss-120b mistral-small-4-119b-2603 gpt-5.4-mini gpt-5.5
     
     messages=[
         {
             "role": "user",
             "content": f"""
-            You are a knowledgeable assistant who helps to decide the columns to be anonymized. You have expert knowledge in DCAT, DPV.
+            You are a knowledgeable assistant who helps to decide the columns to be anonymized. You have expert knowledge in Data catalogy vocabulary (DCAT) and Data Privacy Vocabulary (DPV).
             
-            We want you to read the table {table4_test_markdown}'.
+            We want you to read the table {table4_test_markdown}.
             Instructions:
-            1. Review the column name and the example data.
-            2. Based data, give the confidence score in percentage for all the columns.
-            3. Give me the columns that should be anonymized, and the reasons why they should be anonymized.
-            
+            1. Review the whole table and column names of the table.
+            2. Based on input table, give the confidence score in percentage for all the columns.
+            3. Give me the columns that should be anonymized, and the reasons why they should be anonymized based on the expert knowlegde.
             """
         }
     ],
-    temperature=0
 )
+
 print(response.choices[0].message.content)
+#print(response)
 
 
 
