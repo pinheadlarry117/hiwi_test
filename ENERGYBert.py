@@ -81,7 +81,7 @@ for idx in top_indices:
 ontology_a = [
     "PowerGeneration",
     "ElectricityConsumption",
-    "CarbonEmission"
+    "CarbonDioxide Emission",
 ]
 
 ontology_b = [
@@ -111,16 +111,14 @@ g.parse(r"C:\Users\yga-hzh\Downloads\pizza.owl.xml")
 #    print(s, p, o)
 
 #Extract labels
+pizza_labels = []
 for cls in g.subjects(RDF.type, OWL.Class):
-    label = g.value(cls, RDFS.label)
+    label_pizza = g.value(cls, RDFS.label)
 
-    if label:
-        #print(label)
-        pass
-    else:
-        #print(cls)
-        pass
+    if label_pizza:
+        pizza_labels.append(str(label_pizza))
 
+print(pizza_labels[:5])
 
 g_pd = Graph()
 g_pd.parse(
@@ -129,15 +127,12 @@ g_pd.parse(
 )
 print(len(g_pd))
 
-
+pd_labels = []
 for cls in g_pd.subjects(RDF.type, RDFS.Class):
     label_pd = g_pd.value(cls, SKOS.prefLabel)
 
     if label_pd:
-        print(label_pd)
-    else:
-        print(cls)
-
+        pd_labels.append(str(label_pd))
 
 g_loc = Graph()
 g_loc.parse(
@@ -146,34 +141,26 @@ g_loc.parse(
 )
 print(len(g_loc))
 
-
+loc_labels = []
 for cls in g_loc.subjects(RDF.type, RDFS.Class):
     label_loc = g_loc.value(cls, SKOS.prefLabel)
 
     if label_loc:
-        print(label_loc)
-    else:
-        print(cls)
+        loc_labels.append(str(label_loc))
 
-pd_classes = [
-    str(cls)
-    for cls in g_pd.subjects(RDF.type, RDFS.Class)
-]
-
-loc_classes = [
-    str(cls)
-    for cls in g_loc.subjects(RDF.type, RDFS.Class)
-]
+print(pd_labels[:10])
+print(loc_labels[:10])
 
 emb_pd = model_sen.encode(
-    pd_classes,
+    pd_labels,
     convert_to_tensor=True
 )
 
 emb_loc = model_sen.encode(
-    loc_classes,
+    loc_labels,
     convert_to_tensor=True
 )
 
 similarities = cos_sim(emb_pd, emb_loc)
 print("Ontology similarities: ", similarities)
+
