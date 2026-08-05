@@ -5,77 +5,18 @@ import re
 from sentence_transformers.util import cos_sim
 from rdflib import Graph
 from rdflib.namespace import RDF, OWL, RDFS, SKOS
+import pandas as pd
+from pathlib import Path
 
 #tokenizer = AutoTokenizer.from_pretrained("ontology/EnergyBert")
 #model = AutoModel.from_pretrained("ontology/EnergyBert", device_map="auto")
 tokenizer = AutoTokenizer.from_pretrained(r"C:\Users\yga-hzh\Downloads\ENERGYBert")
 model = AutoModel.from_pretrained(r"C:\Users\yga-hzh\Downloads\ENERGYBert", device_map="auto")
 
-pdf_path = r"C:\Users\yga-hzh\Downloads\24S-202.pdf"
-reader = PdfReader(pdf_path)
-
-text = ""
-
-for page in reader.pages:
-    page_text = page.extract_text()
-    if page_text:
-        text += page_text + "\n"
-
-#print(text)
-
 #model = SentenceTransformer("ontology/EnergyBert")
 model_sen = SentenceTransformer(r"C:\Users\yga-hzh\Downloads\ENERGYBert")
 
-"""
-sentences = [
-    "That is a happy person",
-    "That is a happy dog",
-    "That is a very happy person",
-    "Today is a sunny day"
-]
-"""
-
-embedding = model_sen.encode(text)
-
-#similarities = model.similarity(embeddings, embeddings)
-#print(similarities.shape)
-#print(similarities)
-print("Embedding shape:", embedding.shape)
-
-paragraphs = [
-    p.strip()
-    for p in re.split(r'\.\s+', text)
-    if len(p.strip()) > 10
-]
-
-print(len(paragraphs))
-embeddings = model_sen.encode(paragraphs)
-
-print(f"Found {len(paragraphs)} paragraphs")
-
-query = "Nuclear power plant safety and regulations"
-
-query_embedding = model_sen.encode(
-    query,
-    convert_to_tensor=True
-)
-
-paragraph_embeddings = model_sen.encode(
-    paragraphs,
-    convert_to_tensor=True
-)
-
-scores = model_sen.similarity(
-    query_embedding,
-    paragraph_embeddings
-)[0]
-
-top_indices = scores.argsort(descending=True)[:5]
-
-for idx in top_indices:
-    print("\nScore:", float(scores[idx]))
-    print(paragraphs[int(idx)])
-
+r"""
 
 #test EnergyBert model with ontology terms
 ontology_a = [
@@ -101,14 +42,11 @@ emb_b = model_sen.encode(
 )
 
 similarities = cos_sim(emb_a, emb_b)
-print("Ontology similarities: ", similarities)
+print("Ontology similarities for ontology a and b: ", similarities)
 
 #test EnergyBert model with ontology 
 g = Graph()
 g.parse(r"C:\Users\yga-hzh\Downloads\pizza.owl.xml")
-
-#for s, p, o in g:
-#    print(s, p, o)
 
 #Extract labels
 pizza_labels = []
@@ -118,7 +56,7 @@ for cls in g.subjects(RDF.type, OWL.Class):
     if label_pizza:
         pizza_labels.append(str(label_pizza))
 
-print(pizza_labels[:5])
+print(pizza_labels[:])
 
 g_pd = Graph()
 g_pd.parse(
@@ -151,6 +89,11 @@ for cls in g_loc.subjects(RDF.type, RDFS.Class):
 print(pd_labels[:10])
 print(loc_labels[:10])
 
+emb_pizza = model_sen.encode(
+    pizza_labels,
+    convert_to_tensor=True
+)
+
 emb_pd = model_sen.encode(
     pd_labels,
     convert_to_tensor=True
@@ -161,6 +104,78 @@ emb_loc = model_sen.encode(
     convert_to_tensor=True
 )
 
-similarities = cos_sim(emb_pd, emb_loc)
-print("Ontology similarities: ", similarities)
+similarities_pdpizza = cos_sim(emb_pizza, emb_pd)
+similarities_pdloc = cos_sim(emb_pd, emb_loc)
+similarities_pizzaloc = cos_sim(emb_pizza, emb_loc)
+print("Ontology similarities for pd and pizza: ", similarities_pdpizza)
+print("Ontology similarities for pd and loc: ", similarities_pdloc)
+print("Ontology similarities for pizza and loc: ", similarities_pizzaloc)
+"""
 
+g_oeo = Graph()
+g_oeo.parse(
+    r"C:\Users\yga-hzh\Downloads\oeo1.rdf"
+)
+
+oeo_labels = []
+for cls in g_oeo.subjects(RDF.type, OWL.Class):
+    label_oeo = g_oeo.value(cls, RDFS.label)
+
+    if label_oeo:
+        oeo_labels.append(str(label_oeo))
+
+g_beo = Graph()
+g_beo.parse(
+    r"C:\Users\yga-hzh\Downloads\beo1.rdf"
+)
+
+beo_labels = []
+for cls in g_beo.subjects(RDF.type, OWL.Class):
+    label_beo = g_beo.value(cls, RDFS.label)
+
+    if label_beo:
+        beo_labels.append(str(label_beo))
+
+print(len(oeo_labels))
+print(len(beo_labels))
+print(oeo_labels[:10])
+print(beo_labels[:10])
+
+emb_oeo = model_sen.encode(
+    oeo_labels,
+    convert_to_tensor=True
+)
+
+emb_beo = model_sen.encode(
+    beo_labels,
+    convert_to_tensor=True
+)
+similarities_oeobeo = cos_sim(emb_oeo, emb_beo)
+print("Ontology similarities for oeo and beo: ", similarities_oeobeo)
+
+# Convert tensor to DataFrame
+df = pd.DataFrame(
+    similarities_oeobeo.cpu().numpy(),
+    index=oeo_labels,
+    columns=beo_labels
+)
+
+if not Path("hiwi_test/oeo_beo_similarity_matrix.csv").exists():
+    df.to_csv("hiwi_test/oeo_beo_similarity_matrix.csv", index=False)
+
+results = []
+
+for i, oeo_label in enumerate(oeo_labels):
+    for j, beo_label in enumerate(beo_labels):
+        results.append(
+            (similarities_oeobeo[i, j].item(), oeo_label, beo_label)
+        )
+
+results.sort(reverse=True, key=lambda x: x[0])
+
+print("\nTop 20 Matches:")
+for score, oeo, beo in results[:20]:
+    print(f"Score: {score:.4f}")
+    print(f"OEO: {oeo}")
+    print(f"BEO: {beo}")
+    print("-" * 50)
