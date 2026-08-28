@@ -117,37 +117,43 @@ g_oeo.parse(
     r"C:\Users\yga-hzh\Downloads\oeo1.rdf"
 )
 
-oeo_labels = []
+oeo_classes = []
 for cls in g_oeo.subjects(RDF.type, OWL.Class):
     label_oeo = g_oeo.value(cls, RDFS.label)
 
     if label_oeo:
-        oeo_labels.append(str(label_oeo))
+        oeo_classes.append({
+            "label": str(label_oeo),
+            "iri": str(cls)
+        })
 
 g_beo = Graph()
 g_beo.parse(
     r"C:\Users\yga-hzh\Downloads\beo1.rdf"
 )
 
-beo_labels = []
+beo_classes = []
 for cls in g_beo.subjects(RDF.type, OWL.Class):
     label_beo = g_beo.value(cls, RDFS.label)
 
     if label_beo:
-        beo_labels.append(str(label_beo))
+        beo_classes.append({
+            "label": str(label_beo),
+            "iri": str(cls)
+        })
 
-print(len(oeo_labels))
-print(len(beo_labels))
-print(oeo_labels[:10])
-print(beo_labels[:10])
+print(len(oeo_classes))
+print(len(beo_classes))
+print(oeo_classes[:10])
+print(beo_classes[:10])
 
 emb_oeo = model_sen.encode(
-    oeo_labels,
+    [cls["label"] for cls in oeo_classes],
     convert_to_tensor=True
 )
 
 emb_beo = model_sen.encode(
-    beo_labels,
+    [cls["label"] for cls in beo_classes],
     convert_to_tensor=True
 )
 similarities_oeobeo = cos_sim(emb_oeo, emb_beo)
@@ -156,26 +162,50 @@ print("Ontology similarities for oeo and beo: ", similarities_oeobeo)
 # Convert tensor to DataFrame
 df = pd.DataFrame(
     similarities_oeobeo.cpu().numpy(),
-    index=oeo_labels,
-    columns=beo_labels
+    index=[cls["label"] for cls in oeo_classes],
+    columns=[cls["label"] for cls in beo_classes]
 )
 
 if not Path("hiwi_test/oeo_beo_similarity_matrix.csv").exists():
     df.to_csv("hiwi_test/oeo_beo_similarity_matrix.csv", index=False)
 
-results = []
 
-for i, oeo_label in enumerate(oeo_labels):
-    for j, beo_label in enumerate(beo_labels):
-        results.append(
-            (similarities_oeobeo[i, j].item(), oeo_label, beo_label)
-        )
+threshold = 0.9
 
-results.sort(reverse=True, key=lambda x: x[0])
+high_similarity_matches = []
 
-print("\nTop 20 Matches:")
-for score, oeo, beo in results[:20]:
-    print(f"Score: {score:.4f}")
-    print(f"OEO: {oeo}")
-    print(f"BEO: {beo}")
+for i, oeo_cls in enumerate(oeo_classes):
+    for j, beo_cls in enumerate(beo_classes):
+        score = similarities_oeobeo[i, j].item()
+
+        if score > threshold:
+            high_similarity_matches.append({
+                "Similarity": score,
+                "OEO_Label": oeo_cls["label"],
+                "OEO_IRI": oeo_cls["iri"],
+                "BEO_Label": beo_cls["label"],
+                "BEO_IRI": beo_cls["iri"]
+            })
+
+high_similarity_matches.sort(reverse=True, key=lambda x: x["Similarity"])
+
+print(f"Found {len(high_similarity_matches)} matches with similarity > {threshold}\n")
+
+for match in high_similarity_matches:
+    print(f"Similarity: {match['Similarity']:.4f}")
+    print(f"OEO: {match['OEO_Label']} ({match['OEO_IRI']})")
+    print(f"BEO: {match['BEO_Label']} ({match['BEO_IRI']})")
     print("-" * 50)
+    
+matches_df = pd.DataFrame(high_similarity_matches)
+
+matches_df.sort_values(
+    by="Similarity",
+    ascending=False,
+    inplace=True
+)
+
+matches_df.to_csv(
+    "hiwi_test/oeo_beo_matches_above_0.9.csv",
+    index=False
+)
