@@ -4,11 +4,11 @@ import pandas as pd
 
 # Load ontologies
 onto1 = get_ontology(
-    r"C:\Users\yga-hzh\Downloads\oeo1.rdf"
+    r"C:\Users\75909\Downloads\oeo.rdf"
 ).load()
 
 onto2 = get_ontology(
-    r"C:\Users\yga-hzh\Downloads\beo1.rdf"
+    r"C:\Users\75909\Downloads\beo.rdf"
 ).load()
 
 
@@ -18,15 +18,28 @@ onto2 = get_ontology(
 
 # Read matches
 df = pd.read_csv(
-    r"C:\Users\yga-hzh\Downloads\hiwi\hiwi_test\oeo_beo_matches_above_0.9.csv"
+    r"C:\Users\75909\Desktop\hiwi\hiwi_test\oeo_beo_matches_above_0.9.csv"
 )
 
 for _, row in df.iterrows():
 
-    oeo_class = IRIS[row["OEO_IRI"]]
-    beo_class = IRIS[row["BEO_IRI"]]
+    oeo_iri = row["OEO_IRI"]
+    beo_iri = row["BEO_IRI"]
 
-    print(f"Replacing {oeo_class.name} with {beo_class.name}")
+    oeo_class = IRIS[oeo_iri]
+    beo_class = IRIS[beo_iri]
+
+    if oeo_class is None:
+        print(f"OEO class not found: {oeo_iri}")
+        continue
+
+    if beo_class is None:
+        print(f"BEO class not found: {beo_iri}")
+        continue
+
+
+
+    print(f"Replacing {oeo_class.label} with {beo_class.name}")
 
     # Replace OEO class in subclass relations
     for child in list(oeo_class.subclasses()):
@@ -69,6 +82,6 @@ for _, row in df.iterrows():
 
 # Save merged ontology
 onto1.save(
-    file=r"C:\Users\yga-hzh\Downloads\merged1.owl",
+    file=r"C:\Users\75909\Downloads\merged1.owl",
     format="rdfxml"
 )
