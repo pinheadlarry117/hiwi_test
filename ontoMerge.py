@@ -1,87 +1,190 @@
-from ENERGYBert import *
 from owlready2 import *
 import pandas as pd
+import re
 
+# --------------------------------------------------
 # Load ontologies
-onto1 = get_ontology(
-    r"C:\Users\75909\Downloads\oeo.rdf"
+# --------------------------------------------------
+oeo = get_ontology(
+    r"C:\Users\yga-hzh\Downloads\oeo1.rdf"
 ).load()
 
-onto2 = get_ontology(
-    r"C:\Users\75909\Downloads\beo.rdf"
+beo = get_ontology(
+    r"C:\Users\yga-hzh\Downloads\beo1.rdf"
 ).load()
 
-
-#delete same class, beo as mother class, oeo as child class
-
-
-
-# Read matches
+# --------------------------------------------------
+# Load mappings
+# --------------------------------------------------
 df = pd.read_csv(
-    r"C:\Users\75909\Desktop\hiwi\hiwi_test\oeo_beo_matches_above_0.9.csv"
+    r"C:\Users\yga-hzh\Downloads\hiwi\hiwi_test\oeo_beo_matches_above_0.9.csv"
 )
+
+# --------------------------------------------------
+# Extract IRIs from HTML strings if necessary
+# --------------------------------------------------
+def extract_iri(value):
+
+    value = str(value)
+
+    match = re.search(r'href="([^"]+)"', value)
+
+    if match:
+        return match.group(1)
+
+    return value.strip()
+
+df["OEO_IRI"] = df["OEO_IRI"].apply(extract_iri)
+df["BEO_IRI"] = df["BEO_IRI"].apply(extract_iri)
+
+# --------------------------------------------------
+# Keep only the best match for each OEO class
+# --------------------------------------------------
+df = df.sort_values(
+    by="Similarity",
+    ascending=False
+)
+
+df = df.drop_duplicates(
+    subset=["OEO_IRI"],
+    keep="first"
+)
+
+print("Mappings used:", len(df))
+
+# --------------------------------------------------
+# Merge
+# --------------------------------------------------
+merged = 0
 
 for _, row in df.iterrows():
 
-    oeo_iri = row["OEO_IRI"]
-    beo_iri = row["BEO_IRI"]
+    try:
 
-    oeo_class = IRIS[oeo_iri]
-    beo_class = IRIS[beo_iri]
+        oeo_class = IRIS[row["OEO_IRI"]]
+        beo_class = IRIS[row["BEO_IRI"]]
 
-    if oeo_class is None:
-        print(f"OEO class not found: {oeo_iri}")
-        continue
+        if oeo_class is None:
+            print("OEO class not found:", row["OEO_IRI"])
+            continue
 
-    if beo_class is None:
-        print(f"BEO class not found: {beo_iri}")
-        continue
+        if beo_class is None:
+            print("BEO class not found:", row["BEO_IRI"])
+            continue
 
+        print(
+            f"Merging "
+            f"{oeo_class.label.first() if oeo_class.label else oeo_class.name}"
+            f" --> "
+            f"{beo_class.label.first() if beo_class.label else beo_class.name}")
 
+        # ------------------------------------------
+        # Move subclasses
+        # ------------------------------------------
+        for child in list(oeo_class.subclasses()):
 
-    print(f"Replacing {oeo_class.label} with {beo_class.name}")
+            if oeo_class in child.is_a:
+                child.is_a.remove(oeo_class)
 
-    # Replace OEO class in subclass relations
-    for child in list(oeo_class.subclasses()):
-        for parent in child.is_a:
-            if parent == oeo_class:
-                child.is_a.remove(parent)
+            if beo_class not in child.is_a:
+                child.is_a.append(beo_class)
 
-        if beo_class not in child.is_a:
-            child.is_a.append(beo_class)
+        # ------------------------------------------
+        # Replace references in both ontologies
+        # ------------------------------------------
+        classes_to_check = (
+            list(oeo.classes()) +
+            list(beo.classes())
+        )
 
-    # Transfer class restrictions involving object/data properties
-    for cls in onto1.classes():
-        for parent in list(cls.is_a):
-            if hasattr(parent, "value") and parent.value == oeo_class:
-                cls.is_a.remove(parent)
+        for cls in classes_to_check:
 
-                try:
-                    new_restriction = type(parent)(
-                        parent.property,
-                        parent.type,
-                        beo_class
-                    )
-                    cls.is_a.append(new_restriction)
-                except:
-                    pass
+            for parent in list(cls.is_a):
 
-            elif parent == oeo_class:
-                cls.is_a.remove(parent)
-                cls.is_a.append(beo_class)
+                # direct superclass
+                if parent == oeo_class:
 
-    # Move instances to BEO class
-    for inst in list(oeo_class.instances()):
-        if oeo_class in inst.is_a:
-            inst.is_a.remove(oeo_class)
-        if beo_class not in inst.is_a:
-            inst.is_a.append(beo_class)
+                    cls.is_a.remove(parent)
 
-    # Delete OEO class
-    destroy_entity(oeo_class)
+                    if beo_class not in cls.is_a:
+                        cls.is_a.append(beo_class)
 
+                # restrictions
+                elif isinstance(parent, Restriction):
+
+                    if getattr(parent, "value", None) == oeo_class:
+
+                        cls.is_a.remove(parent)
+
+                        try:
+
+                            new_rest = type(parent)(
+                                parent.property,
+                                parent.type,
+                                beo_class
+                            )
+
+                            cls.is_a.append(new_rest)
+
+                        except Exception as e:
+                            print(
+                                f"Restriction error: {e}"
+                            )
+
+        # ------------------------------------------
+        # Move individuals
+        # ------------------------------------------
+        for ind in list(oeo_class.instances()):
+
+            if oeo_class in ind.is_a:
+                ind.is_a.remove(oeo_class)
+
+            if beo_class not in ind.is_a:
+                ind.is_a.append(beo_class)
+
+        # ------------------------------------------
+        # Copy labels
+        # ------------------------------------------
+        try:
+            for label in oeo_class.label:
+                if label not in beo_class.label:
+                    beo_class.label.append(label)
+        except:
+            pass
+
+        # ------------------------------------------
+        # Copy comments
+        # ------------------------------------------
+        try:
+            for comment in oeo_class.comment:
+                if comment not in beo_class.comment:
+                    beo_class.comment.append(comment)
+        except:
+            pass
+
+        # ------------------------------------------
+        # Delete OEO class
+        # ------------------------------------------
+        destroy_entity(oeo_class)
+
+        merged += 1
+
+    except Exception as e:
+
+        print(
+            f"Failed: {row['OEO_IRI']} -> {row['BEO_IRI']}"
+        )
+
+        print(e)
+
+print(f"\nMerged classes: {merged}")
+
+# --------------------------------------------------
 # Save merged ontology
-onto1.save(
-    file=r"C:\Users\75909\Downloads\merged1.owl",
+# --------------------------------------------------
+beo.save(
+    file=r"C:\Users\yga-hzh\Downloads\mergedtest.owl",
     format="rdfxml"
 )
+
+print("Merged ontology saved.")
