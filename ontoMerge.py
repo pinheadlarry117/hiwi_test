@@ -55,7 +55,7 @@ print("Mappings used:", len(df))
 # --------------------------------------------------
 # Merge
 # --------------------------------------------------
-merged = 0
+merged_count = 0
 
 for _, row in df.iterrows():
 
@@ -167,17 +167,18 @@ for _, row in df.iterrows():
         # ------------------------------------------
         destroy_entity(oeo_class)
 
-        merged += 1
+        merged_count += 1
 
     except Exception as e:
-
-        print(
-            f"Failed: {row['OEO_IRI']} -> {row['BEO_IRI']}"
-        )
-
+        print("\nRestriction error")
+        print("Class:", cls)
+        print("Restriction:", parent)
+        print("Property:", parent.property)
+        print("Type:", parent.type)
+        print("Value:", getattr(parent, "value", None))
         print(e)
 
-print(f"\nMerged classes: {merged}")
+print(f"\nMerged classes: {merged_count}")
 
 # --------------------------------------------------
 # Save merged ontology
