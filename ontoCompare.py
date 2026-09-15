@@ -1,5 +1,6 @@
 from rdflib import *
 from rdflib.namespace import RDF, RDFS, OWL
+from rdflib import BNode
 
 before = Graph()
 before.parse(
@@ -9,30 +10,22 @@ before.parse(
 
 after = Graph()
 after.parse(
-    r"C:\Users\yga-hzh\Downloads\mergedtest.owl",
+    r"C:\Users\yga-hzh\Downloads\mergetest2.rdf",
     format="xml"
 )
 
-def get_classes(g):
 
+def get_named_classes(g):
     classes = set()
 
-    classes.update(
-        g.subjects(RDF.type, OWL.Class)
-    )
-
-    classes.update(
-        g.subjects(RDFS.subClassOf, None)
-    )
-
-    classes.update(
-        g.objects(None, RDFS.subClassOf)
-    )
+    for c in g.subjects(RDF.type, OWL.Class):
+        if not isinstance(c, BNode):
+            classes.add(c)
 
     return classes
 
-before_classes = get_classes(before)
-after_classes = get_classes(after)
+before_classes = get_named_classes(before)
+after_classes = get_named_classes(after)
 
 added_classes = after_classes - before_classes
 removed_classes = before_classes - after_classes

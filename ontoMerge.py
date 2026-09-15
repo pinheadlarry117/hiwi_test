@@ -180,12 +180,37 @@ for _, row in df.iterrows():
 
 print(f"\nMerged classes: {merged_count}")
 
+
+matched_oeo = set(df["OEO_IRI"])
+
+for cls in list(oeo.classes()):
+
+    if cls.iri not in matched_oeo:
+        with beo:
+            cls.namespace = beo
+
+print("BEO classes before save:", len(list(beo.classes())))
+print("OEO classes before save:", len(list(oeo.classes())))
+
+moved = 0
+
+for cls in list(oeo.classes()):
+    if cls.iri not in matched_oeo:
+        moved += 1
+
+print("Unmatched OEO classes:", moved)
 # --------------------------------------------------
 # Save merged ontology
 # --------------------------------------------------
-beo.save(
-    file=r"C:\Users\yga-hzh\Downloads\mergedtest.owl",
+default_world.save(
+    file=r"C:\Users\yga-hzh\Downloads\mergedtest_all.owl",
     format="rdfxml"
 )
 
 print("Merged ontology saved.")
+
+test = get_ontology(
+    r"C:\Users\yga-hzh\Downloads\mergedtest_all.owl"
+).load()
+
+print("Classes in saved file:", len(list(test.classes())))
