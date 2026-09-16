@@ -10,11 +10,14 @@ from pathlib import Path
 
 #tokenizer = AutoTokenizer.from_pretrained("ontology/EnergyBert")
 #model = AutoModel.from_pretrained("ontology/EnergyBert", device_map="auto")
-tokenizer = AutoTokenizer.from_pretrained(r"C:\Users\yga-hzh\Downloads\ENERGYBert")
-model = AutoModel.from_pretrained(r"C:\Users\yga-hzh\Downloads\ENERGYBert", device_map="auto")
+#tokenizer = AutoTokenizer.from_pretrained(r"C:\Users\yga-hzh\Downloads\ENERGYBert")
+#model = AutoModel.from_pretrained(r"C:\Users\yga-hzh\Downloads\ENERGYBert", device_map="auto")
+
+tokenizer = AutoTokenizer.from_pretrained(r"C:\Users\75909\Downloads\ENERGYBert")
+model = AutoModel.from_pretrained(r"C:\Users\75909\Downloads\ENERGYBert", device_map="auto")
 
 #model = SentenceTransformer("ontology/EnergyBert")
-model_sen = SentenceTransformer(r"C:\Users\yga-hzh\Downloads\ENERGYBert")
+model_sen = SentenceTransformer(r"C:\Users\75909\Downloads\ENERGYBert")
 
 r"""
 
@@ -114,7 +117,7 @@ print("Ontology similarities for pizza and loc: ", similarities_pizzaloc)
 
 g_oeo = Graph()
 g_oeo.parse(
-    r"C:\Users\yga-hzh\Downloads\oeo1.rdf"
+    r"C:\Users\75909\Downloads\oeo.rdf"
 )
 
 oeo_classes = []
@@ -129,7 +132,7 @@ for cls in g_oeo.subjects(RDF.type, OWL.Class):
 
 g_beo = Graph()
 g_beo.parse(
-    r"C:\Users\yga-hzh\Downloads\beo1.rdf"
+    r"C:\Users\75909\Downloads\beo.rdf"
 )
 
 beo_classes = []
@@ -170,7 +173,7 @@ if not Path("hiwi_test/oeo_beo_similarity_matrix.csv").exists():
     df.to_csv("hiwi_test/oeo_beo_similarity_matrix.csv", index=False)
 
 
-threshold = 0.9
+threshold = 0.85
 
 high_similarity_matches = []
 
@@ -206,7 +209,7 @@ matches_df.sort_values(
 )
 
 matches_df.to_csv(
-    "hiwi_test/oeo_beo_matches_above_0.9.csv",
+    "hiwi_test/oeo_beo_matches_above_0.85.csv",
     index=False
 )
 

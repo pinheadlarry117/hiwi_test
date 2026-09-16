@@ -5,21 +5,19 @@ import re
 # --------------------------------------------------
 # Load ontologies
 # --------------------------------------------------
-oeo = get_ontology(
-    r"C:\Users\yga-hzh\Downloads\oeo1.rdf"
-).load()
+#oeo = get_ontology(r"C:\Users\yga-hzh\Downloads\oeo1.rdf").load()
 
-beo = get_ontology(
-    r"C:\Users\yga-hzh\Downloads\beo1.rdf"
-).load()
+oeo = get_ontology(r"C:\Users\75909\Downloads\oeo.rdf").load()
 
+#beo = get_ontology(r"C:\Users\yga-hzh\Downloads\beo1.rdf").load()
+
+beo = get_ontology(r"C:\Users\75909\Downloads\beo.rdf").load()
 # --------------------------------------------------
 # Load mappings
 # --------------------------------------------------
-df = pd.read_csv(
-    r"C:\Users\yga-hzh\Downloads\hiwi\hiwi_test\oeo_beo_matches_above_0.9.csv"
-)
+#df = pd.read_csv(r"C:\Users\yga-hzh\Downloads\hiwi\hiwi_test\oeo_beo_matches_above_0.9.csv")
 
+df = pd.read_csv(r"C:\Users\75909\Desktop\hiwi\hiwi_test\oeo_beo_matches_above_0.9.csv")
 # --------------------------------------------------
 # Extract IRIs from HTML strings if necessary
 # --------------------------------------------------
@@ -190,7 +188,6 @@ for cls in list(oeo.classes()):
             cls.namespace = beo
 
 print("BEO classes before save:", len(list(beo.classes())))
-print("OEO classes before save:", len(list(oeo.classes())))
 
 moved = 0
 
@@ -203,14 +200,14 @@ print("Unmatched OEO classes:", moved)
 # Save merged ontology
 # --------------------------------------------------
 default_world.save(
-    file=r"C:\Users\yga-hzh\Downloads\mergedtest_all.owl",
+    file=r"C:\Users\75909\Downloads\mergedtest_all.owl",
     format="rdfxml"
 )
 
 print("Merged ontology saved.")
 
 test = get_ontology(
-    r"C:\Users\yga-hzh\Downloads\mergedtest_all.owl"
+    r"C:\Users\75909\Downloads\mergedtest_all.owl"
 ).load()
 
 print("Classes in saved file:", len(list(test.classes())))
