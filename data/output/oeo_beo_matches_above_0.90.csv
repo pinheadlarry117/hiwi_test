@@ -1,0 +1,72 @@
+Similarity,OEO_Label,OEO_IRI,BEO_Label,BEO_IRI
+1.000000238418579,battery,http://openenergy-platform.org/ontology/oeo/OEO_00000068,Battery,http://energy.linkeddata.es/em-kpi/ontology#Battery
+1.000000238418579,pump,http://openenergy-platform.org/ontology/oeo/OEO_00010090,Pump,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Pump
+1.000000238418579,person,http://openenergy-platform.org/ontology/oeo/OEO_00000323,Person,http://xmlns.com/foaf/0.1/Person
+1.000000238418579,quality,http://purl.obolibrary.org/obo/BFO_0000019,Quality,https://w3id.org/sbeo#Quality
+1.0000001192092896,variable,http://openenergy-platform.org/ontology/oeo/OEO_00000435,Variable,http://identifiers.org/mamo/Variable
+1.0000001192092896,coal,http://openenergy-platform.org/ontology/oeo/OEO_00000088,Coal,https://w3id.org/saref#Coal
+1.0000001192092896,assumption,http://openenergy-platform.org/ontology/oeo/OEO_00000063,Assumption,http://energy.linkeddata.es/em-kpi/ontology#Assumption
+1.0000001192092896,pump,http://openenergy-platform.org/ontology/oeo/OEO_00010090,Pump,http://energy.linkeddata.es/em-kpi/ontology#Pump
+1.0000001192092896,tank,http://openenergy-platform.org/ontology/oeo/OEO_00320055,Tank,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Tank
+1.0000001192092896,tank,http://openenergy-platform.org/ontology/oeo/OEO_00320055,Tank,https://saref.etsi.org/saref4bldg/Tank
+1.0000001192092896,energy unit,http://purl.obolibrary.org/obo/UO_0000111,Energy unit,https://saref.etsi.org/core/EnergyUnit
+1.0000001192092896,transformer,http://openenergy-platform.org/ontology/oeo/OEO_00000420,Transformer,https://saref.etsi.org/saref4bldg/Transformer
+1.0000001192092896,pump,http://openenergy-platform.org/ontology/oeo/OEO_00010090,Pump,https://saref.etsi.org/saref4bldg/Pump
+1.0000001192092896,electric motor,http://openenergy-platform.org/ontology/oeo/OEO_00010027,Electric motor,https://saref.etsi.org/saref4bldg/ElectricMotor
+1.0000001192092896,transformer,http://openenergy-platform.org/ontology/oeo/OEO_00000420,Transformer,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Transformer
+1.0000001192092896,energy unit,http://purl.obolibrary.org/obo/UO_0000111,Energy unit,https://w3id.org/saref#EnergyUnit
+1.0000001192092896,water,http://openenergy-platform.org/ontology/oeo/OEO_00000441,Water,https://w3id.org/saref#Water
+1.0,wind,http://openenergy-platform.org/ontology/oeo/OEO_00000043,Wind,https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl#Wind
+1.0,energy,http://openenergy-platform.org/ontology/oeo/OEO_00000150,Energy,https://saref.etsi.org/core/Energy
+1.0,energy system,http://openenergy-platform.org/ontology/oeo/OEO_00030024,Energy System,http://www.owl-ontologies.com/EPC4EU#EnergySystem
+1.0,road,http://openenergy-platform.org/ontology/oeo/OEO_00320022,Road,https://w3id.org/sbeo#Road
+1.0,compressor,http://openenergy-platform.org/ontology/oeo/OEO_00010480,Compressor,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Compressor
+1.0,energy,http://openenergy-platform.org/ontology/oeo/OEO_00000150,Energy,https://saref.etsi.org/saref4ener/Energy
+1.0,meter,http://purl.obolibrary.org/obo/UO_0000008,Meter,https://w3id.org/saref#Meter
+1.0,meter,http://purl.obolibrary.org/obo/UO_0000008,Meter,https://saref.etsi.org/core/Meter
+1.0,role,http://purl.obolibrary.org/obo/BFO_0000023,Role,https://w3id.org/sbeo#Role
+1.0,compressor,http://openenergy-platform.org/ontology/oeo/OEO_00010480,Compressor,https://saref.etsi.org/saref4bldg/Compressor
+0.9999999403953552,pressure,http://openenergy-platform.org/ontology/oeo/OEO_00010454,Pressure,https://w3id.org/saref#Pressure
+0.9999998807907104,service,http://openenergy-platform.org/ontology/oeo/OEO_00140124,Service,https://saref.etsi.org/core/Service
+0.9999998807907104,temperature unit,http://purl.obolibrary.org/obo/UO_0000005,Temperature unit,https://saref.etsi.org/core/TemperatureUnit
+0.9999998807907104,temperature unit,http://purl.obolibrary.org/obo/UO_0000005,Temperature unit,https://w3id.org/saref#TemperatureUnit
+0.9999998211860657,boiler,http://openenergy-platform.org/ontology/oeo/OEO_00310013,Boiler,https://saref.etsi.org/saref4bldg/Boiler
+0.9999998211860657,temperature,http://openenergy-platform.org/ontology/oeo/OEO_00010453,Temperature,https://w3id.org/saref#Temperature
+0.9999998211860657,boiler,http://openenergy-platform.org/ontology/oeo/OEO_00310013,Boiler,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Boiler
+0.9999998211860657,currency,http://openenergy-platform.org/ontology/oeo/OEO_00040004,Currency,https://saref.etsi.org/core/Currency
+0.9999998211860657,temperature,http://openenergy-platform.org/ontology/oeo/OEO_00010453,Temperature,https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl#Temperature
+0.9999998211860657,commodity,http://openenergy-platform.org/ontology/oeo/OEO_00020067,Commodity,https://w3id.org/saref#Commodity
+0.9999998211860657,generator,http://openenergy-platform.org/ontology/oeo/OEO_00000188,Generator,https://w3id.org/saref#Generator
+0.9999997615814209,power,http://openenergy-platform.org/ontology/oeo/OEO_00000333,Power,https://saref.etsi.org/core/Power
+0.9999997615814209,power,http://openenergy-platform.org/ontology/oeo/OEO_00000333,Power,https://saref.etsi.org/saref4ener/Power
+0.9999997615814209,power,http://openenergy-platform.org/ontology/oeo/OEO_00000333,Power,https://w3id.org/saref#Power
+0.9999997019767761,pressure unit,http://purl.obolibrary.org/obo/UO_0000109,Pressure unit,https://saref.etsi.org/core/PressureUnit
+0.9999997019767761,pressure unit,http://purl.obolibrary.org/obo/UO_0000109,Pressure unit,https://w3id.org/saref#PressureUnit
+0.9999997019767761,function,http://purl.obolibrary.org/obo/BFO_0000034,Function,https://w3id.org/saref#Function
+0.9999996423721313,power,http://openenergy-platform.org/ontology/oeo/OEO_00000333,power,https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/gbBuildingOntology.owl#Power
+0.9404877424240112,electric traction motor,http://openenergy-platform.org/ontology/oeo/OEO_00010028,Electric motor,https://saref.etsi.org/saref4bldg/ElectricMotor
+0.9368873834609985,function,http://purl.obolibrary.org/obo/BFO_0000034,Event function,https://w3id.org/saref#EventFunction
+0.9339357614517212,diesel engine,http://openenergy-platform.org/ontology/oeo/OEO_00010244,Engine,https://saref.etsi.org/saref4bldg/Engine
+0.9306321144104004,gas engine,http://openenergy-platform.org/ontology/oeo/OEO_00320008,Engine,https://saref.etsi.org/saref4bldg/Engine
+0.92735755443573,object,http://purl.obolibrary.org/obo/BFO_0000030,Physical object,https://saref.etsi.org/saref4bldg/PhysicalObject
+0.9269381761550903,heat pump,http://openenergy-platform.org/ontology/oeo/OEO_00000212,Pump,http://energy.linkeddata.es/em-kpi/ontology#Pump
+0.9269381761550903,heat pump,http://openenergy-platform.org/ontology/oeo/OEO_00000212,Pump,https://saref.etsi.org/saref4bldg/Pump
+0.9269381165504456,heat pump,http://openenergy-platform.org/ontology/oeo/OEO_00000212,Pump,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Pump
+0.9189992547035217,water flow,http://openenergy-platform.org/ontology/oeo/OEO_00110002,Flow,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Flow
+0.9172711372375488,meter,http://purl.obolibrary.org/obo/UO_0000008,Energy meter,https://w3id.org/saref#EnergyMeter
+0.9159162044525146,traction motor,http://openenergy-platform.org/ontology/oeo/OEO_00010254,Electric motor,https://saref.etsi.org/saref4bldg/ElectricMotor
+0.915238618850708,object,http://purl.obolibrary.org/obo/BFO_0000030,Building object,https://saref.etsi.org/saref4bldg/BuildingObject
+0.9140949249267578,heater,http://openenergy-platform.org/ontology/oeo/OEO_00000210,Space heater,https://saref.etsi.org/saref4bldg/SpaceHeater
+0.9140949249267578,heater,http://openenergy-platform.org/ontology/oeo/OEO_00000210,Space heater,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Space_heater
+0.9096490144729614,ramping,http://openenergy-platform.org/ontology/oeo/OEO_00260001,Ramp,https://w3id.org/sbeo#Ramp
+0.9084985852241516,unit,http://purl.obolibrary.org/obo/UO_0000000,Energy unit,https://saref.etsi.org/core/EnergyUnit
+0.9084985852241516,unit,http://purl.obolibrary.org/obo/UO_0000000,Energy unit,https://w3id.org/saref#EnergyUnit
+0.906711220741272,evaporation,http://openenergy-platform.org/ontology/oeo/OEO_00310041,Evaporator,https://saref.etsi.org/saref4bldg/Evaporator
+0.9053642749786377,battery,http://openenergy-platform.org/ontology/oeo/OEO_00000068,Battery storage,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Battery_storage
+0.9043042063713074,energy system model,http://openenergy-platform.org/ontology/oeo/OEO_00030015,Energy System,http://www.owl-ontologies.com/EPC4EU#EnergySystem
+0.9035763740539551,fuel commodity,http://openenergy-platform.org/ontology/oeo/OEO_00020068,Commodity,https://w3id.org/saref#Commodity
+0.903262734413147,meter,http://purl.obolibrary.org/obo/UO_0000008,Power meter,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Power_meter
+0.9005550146102905,renewable,http://openenergy-platform.org/ontology/oeo/OEO_00030004,Micro renewable,https://w3id.org/saref#MicroRenewable
+0.9003390073776245,tank ship,http://openenergy-platform.org/ontology/oeo/OEO_00010290,Tank,https://sargon-n5geh.netlify.app/ontology/1.0/classes/Tank
+0.9003390073776245,tank ship,http://openenergy-platform.org/ontology/oeo/OEO_00010290,Tank,https://saref.etsi.org/saref4bldg/Tank
+0.9000802040100098,greenhouse gas,http://openenergy-platform.org/ontology/oeo/OEO_00000020,Greenhouse,https://w3id.org/seas/Greenhouse
