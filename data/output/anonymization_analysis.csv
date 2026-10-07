@@ -140,6 +140,9 @@ This table contains **aggregated electrical grid data** at the feeder/substation
 > **Low risk – retain as-is:** all remaining kW capacity columns and the generic kWh consumption columns (`g0`, `g1`, `g2`, `g3`, `g6`), provided the location identifiers above are already pseudonymised.
 
 Applying these transformations would bring the dataset into a state where no single row (or small set of rows) can be linked back to an identifiable individual or business, satisfying the core requirements of **anonymity**, **k-anonymity**, and **data minimisation**."
+
+
+
 gpt-oss-120b,"**Step 1 – Quick review of the data**
 
 | Column | What it holds (from the preview) | Typical DPV data‑type | Typical DCAT role |
@@ -388,4 +391,7 @@ All other columns are **technical, aggregated measurements** that do not refer t
 - **Feeder/substation identifiers can be masked if they map to publicly known, fine‑grained locations, but this is optional.**  
 
 All other columns can be published as‑is, with appropriate DCAT metadata (e.g., `dcat:distribution`, `dcat:temporalCoverage`, `dcat:metric`) describing the dataset’s structure and provenance."
+
+
+
 gpt-6-astra,"ERROR: Error code: 400 - {'error': {'message': ""Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported."", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}"
