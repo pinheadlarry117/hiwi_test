@@ -17,7 +17,7 @@ def analyze_columns(
     input_file,
     base_url,
     api_key,
-    model_name="gpt-5.4-mini"
+    model_name="mistral-small-4-119b-2603"
 ):
     data, preview = load_data(input_file)
 

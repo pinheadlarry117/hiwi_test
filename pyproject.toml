@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ontology_merge"
+name = "hiwi"
 version = "0.1.0"
 
 [tool.setuptools]
@@ -11,3 +11,7 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+include = [
+    "ontology_merge*",
+    "synthetic_data_related*"
+]

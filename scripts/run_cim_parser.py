@@ -1,4 +1,4 @@
-from ontology_merge.cim_parser import save_csv
+from synthetic_data_related.cim_parser import save_csv
 
 
 def main():

@@ -1,7 +1,7 @@
 from ontology_merge.bert_match import find_matches
 import pandas as pd
 
-MODEL_PATH = r"C:\Users\75909\Downloads\ENERGYBert"
+MODEL_PATH = r"C:\Users\yga-hzh\Downloads\ENERGYBert"
 
 OEO_PATH = "data/input/oeo.rdf"
 BEO_PATH = "data/input/beo.rdf"

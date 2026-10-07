@@ -1,4 +1,4 @@
-from ontology_merge.synthetic_data import run_pipeline
+from synthetic_data_related.synthetic_data import run_pipeline
 
 
 def main():
