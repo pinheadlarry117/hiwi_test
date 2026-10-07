@@ -29,11 +29,12 @@ Table Preview:
 {table_preview}
 
 Instructions:
-1. Review the table and column names.
-2. Give a confidence score (%) for every column.
-3. Identify columns that should be anonymized.
-4. Explain the reasons based on privacy and data protection principles.
-5. Return the answer in a structured format.
+1. Can you read the website: https://w3c-cg.github.io/dpv/2.3/pd/? If yes, please read the website and give me the authors and contributors of the website. If not, please ignore this instruction.
+2. Review the table and column names.
+3. Give a confidence score (%) for every column.
+4. Identify columns that should be anonymized.
+5. Explain the reasons based on privacy and data protection principles.
+6. Return the answer in a structured format.
 """
 
 
@@ -126,7 +127,9 @@ def main():
         "mistral-small-4-119b-2603",
         "qwen3.8-27b",
         "gpt-oss-120b",
-        "gpt-6-astra"
+        "gpt-6-astra",
+        "gpt-6-sol",
+        "gpt-6-luna",
     ]
 
     BASE_URL = "https://chat.kiconnect.nrw/api/v1"
