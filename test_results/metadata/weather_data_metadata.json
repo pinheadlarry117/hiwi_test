@@ -1,0 +1,48 @@
+{
+    "tables": {
+        "table": {
+            "columns": {
+                "feeder": {
+                    "sdtype": "numerical"
+                },
+                "timestamp_UTC": {
+                    "sdtype": "datetime",
+                    "datetime_format": null
+                },
+                "timestamp_CET_CEST": {
+                    "sdtype": "datetime",
+                    "datetime_format": null
+                },
+                "direct_radiation_W/m2": {
+                    "sdtype": "numerical"
+                },
+                "diffuse_radiation_W/m2": {
+                    "sdtype": "numerical"
+                },
+                "air_temperature_C": {
+                    "sdtype": "numerical"
+                },
+                "precipitation_kg/m2": {
+                    "sdtype": "numerical"
+                },
+                "snow_height_m": {
+                    "sdtype": "numerical"
+                },
+                "humidity_kg/kg": {
+                    "sdtype": "numerical"
+                },
+                "max_wind_gust_m/s": {
+                    "sdtype": "numerical"
+                },
+                "meridional_wind_m/s": {
+                    "sdtype": "numerical"
+                },
+                "zonal_wind_m/s": {
+                    "sdtype": "numerical"
+                }
+            }
+        }
+    },
+    "relationships": [],
+    "METADATA_SPEC_VERSION": "V1"
+}

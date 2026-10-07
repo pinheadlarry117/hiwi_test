@@ -4,7 +4,7 @@ from synthetic_data_related.synthetic_data import run_pipeline
 def main():
 
     results = run_pipeline(
-        input_file="data/input/sampledata.csv",
+        input_file="data/output/weather_data.csv",
         num_rows=20,
     )
 

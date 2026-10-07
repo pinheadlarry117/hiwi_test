@@ -1,0 +1,117 @@
+model,response
+mistral-small-4-119b-2603,"Here’s the structured analysis of which columns should be anonymized, along with confidence scores and reasoning based on privacy and data protection principles:
+
+| **Column**                     | **Confidence Score (%)** | **Anonymization Need** | **Reasoning**                                                                                                                                                                                                                     |
+|--------------------------------|-------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **feeder**                     | 95%                    | Yes                   | Identifies a specific electrical feeder, which could indirectly reveal geographic or infrastructure details about a small area (e.g., a neighborhood or industrial zone). This may enable re-identification if combined with other data. |
+| **substation**                 | 95%                    | Yes                   | Similar to ""feeder,"" this identifies a specific substation, which could reveal location or infrastructure details. Alone or combined with other columns, it may pose a re-identification risk.                                           |
+| **date**                       | 80%                    | Yes                   | While dates are often considered non-sensitive, combining them with other columns (e.g., energy consumption patterns) could reveal personal or business activities over time, especially if the dataset is small or granular.               |
+| **housing_units_count**         | 70%                    | No                    | Aggregated count of housing units is unlikely to be sensitive on its own, but could contribute to re-identification if combined with other quasi-identifiers (e.g., feeder/substation). Consider generalization (e.g., ranges) if needed.   |
+| **industry_and_commerce_count**  | 70%                    | No                    | Similar to housing units, this is an aggregated count. However, if the number is very small (e.g., 1 or 2), it could reveal business presence in a specific area. Generalization may be advisable.                                      |
+| **storage_heaters_kW**         | 60%                    | No                    | Energy consumption data is generally not directly identifying, but could be combined with other columns (e.g., date, location) to infer occupancy or business operations. Consider aggregation or perturbation if used in sensitive contexts.   |
+| **heat_pumps_kW**              | 60%                    | No                    | Same as above. Energy consumption data is not inherently identifying but may contribute to re-identification when combined with other columns.                                                                                     |
+| **electric_heaters_kW**        | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **hot_water_tanks_kW**        | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **flow-type_heaters_kW**       | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **EV_chargers_kW**             | 70%                    | No                    | Presence of EV chargers could indirectly reveal socioeconomic status or business type (e.g., hotels, shopping centers). If the number is very small, it may warrant anonymization.                                                      |
+| **public_lighting_kW**         | 60%                    | No                    | Aggregated public infrastructure data is unlikely to be sensitive, but could contribute to re-identification if combined with other columns.                                                                                         |
+| **other_consumers_kW**         | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **batteries_kW**               | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **PV_systems_kW**              | 70%                    | No                    | Presence of PV systems could reveal socioeconomic or environmental preferences of a small area. If the number is very small, it may warrant anonymization.                                                                       |
+| **chp_kW**                     | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **g0_general_kWh**             | 60%                    | No                    | Energy consumption breakdowns are not inherently identifying but could be combined with other columns to infer patterns (e.g., occupancy, business hours). Consider aggregation or perturbation.                                      |
+| **g1_workdays_kWh**            | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **g2_evening_kWh**            | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **g3_continuous_kWh**          | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **g4_shop_hairdresser_kWh**    | 70%                    | No                    | Specific business-type consumption (e.g., shops, hairdressers) could reveal commercial activity in a small area. If the number is very small, it may warrant anonymization.                                                      |
+| **g5_bakery_kWh**             | 70%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+| **g6_weekend_kWh**             | 60%                    | No                    | Same as above.                                                                                                                                                                                                                     |
+
+### Key Reasoning:
+1. **Direct Identifiers**: Columns like `feeder` and `substation` are quasi-identifiers that could enable re-identification when combined with other data (e.g., energy consumption patterns). These should be anonymized (e.g., via generalization, suppression, or tokenization).
+2. **Indirect Identifiers**: Columns like `date` and counts (e.g., `housing_units_count`) are not inherently sensitive but could contribute to re-identification when linked with other quasi-identifiers. Anonymization (e.g., date aggregation, rounding counts) is advisable.
+3. **Energy Consumption Data**: While not directly identifying, columns like `storage_heaters_kW` or `g0_general_kWh` could reveal patterns about occupancy or business operations. Consider perturbation (e.g., rounding, noise addition) or aggregation if the dataset is small.
+4. **Sensitive Inferences**: Columns like `EV_chargers_kW` or `PV_systems_kW` could reveal socioeconomic or environmental preferences of a small area. If the values are very small (e.g., 1 or 2), anonymization (e.g., suppression or generalization) is recommended.
+
+### Recommendations:
+- **Anonymize**: `feeder`, `substation`, `date` (if granular), and counts/energy columns if they are very small or could enable re-identification.
+- **Consider Anonymization**: `EV_chargers_kW`, `PV_systems_kW`, and business-type consumption columns (`g4_*`, `g5_*`) if the values are small or the dataset is small.
+- **No Anonymization Needed**: Most energy consumption columns are not inherently sensitive but may require perturbation or aggregation for privacy-preserving analysis."
+qwen3.8-27b,"
+
+# Anonymization Assessment – Electrical Feeder Consumption Data
+
+## Context
+
+This table contains **feeder-level aggregate electrical grid data** (power capacity in kW and energy consumption in kWh) for a specific distribution area. The data is already aggregated (not per-household or per-business), but several columns still pose re-identification or inference risks due to **small cell sizes** (70 housing units, 11 businesses) and **specific categorical breakdowns**.
+
+## Anonymization Recommendations
+
+| **Column** | **Confidence Score (%)** | **Anonymization Need** | **Reasoning** |
+|---|---|---|---|
+| `feeder` | **70** | **Yes – Pseudonymize** | Acts as a **quasi-identifier** (DPV: `dpv:QuasiIdentifier`). Combined with `substation`, it pinpoints a specific geographic/distribution area. An adversary with external knowledge (e.g., grid topology maps) could link this to a named neighbourhood. Replace with a non-reversible code. |
+| `substation` | **70** | **Yes – Pseudonymize** | Same quasi-identifier logic as `feeder`. Together they form a **composite key** that uniquely identifies a grid segment. Pseudonymize to prevent geographic re-identification (GDPR Art. 4(1) – ""indirectly"" identifying a data subject's location). |
+| `date` | **25** | **No (optional generalization)** | A measurement timestamp. On its own it carries minimal privacy risk. However, in combination with the small cell size, a precise date could help an attacker track a specific event (e.g., a new EV charger installation). Optional: generalize to **month** or **quarter** if the dataset is published externally. |
+| `housing_units_count` | **40** | **Yes – Generalize** | A small integer (70 → 72) in a named feeder area is a **disclosure risk**. With only ~70 units, an informed party could enumerate households and infer individual consumption by differencing successive snapshots. Generalize to a **range** (e.g., 50–99) to reduce re-identification risk (DPV: `dpv:Generalization`). |
+| `industry_and_commerce_count` | **40** | **Yes – Generalize** | Same reasoning as `housing_units_count`. A count of 11 businesses in a specific feeder is a small cell. Combined with the specific consumption categories below, it narrows the set of identifiable entities. Generalize to a range (e.g., 5–19). |
+| `storage_heaters_kW` | **15** | **No** | Aggregate installed capacity across ~70 units. The per-unit value (~2 kW) is a standard technical specification and does not reveal individual behaviour. Low inference risk. |
+| `heat_pumps_kW` | **15** | **No** | Aggregate capacity. Standard technical data; no direct link to an individual. |
+| `electric_heaters_kW` | **15** | **No** | Aggregate capacity. No individual-level inference. |
+| `hot_water_tanks_kW` | **15** | **No** | Aggregate capacity. No individual-level inference. |
+| `flow-type_heaters_kW` | **15** | **No** | Aggregate capacity. No individual-level inference. |
+| `EV_chargers_kW` | **20** | **No (monitor)** | Currently 0.0, so no disclosure. If values become non-zero in a small area, a single EV charger could identify a specific household. Monitor and generalize if cell size < 5. |
+| `public_lighting_kW` | **10** | **No** | Public infrastructure data. No personal data involved. |
+| `other_consumers_kW` | **15** | **No** | Aggregate residual category. No individual-level inference. |
+| `batteries_kW` | **15** | **No** | Aggregate capacity. No individual-level inference. |
+| `PV_systems_kW` | **15** | **No** | Aggregate capacity. No individual-level inference. |
+| `chp_kW` | **15** | **No** | Aggregate capacity. No individual-level inference. |
+| `g0_general_kWh` | **15** | **No** | Aggregate energy consumption. Standard grid analytics data. |
+| `g1_workdays_kWh` | **15** | **No** | Aggregate energy consumption by day-type. No individual-level inference. |
+| `g2_evening_kWh` | **15** | **No** | Aggregate energy consumption by time-of-day. No individual-level inference. |
+| `g3_continuous_kWh` | **15** | **No** | Aggregate energy consumption. No individual-level inference. |
+| `g4_shop_hairdresser_kWh` | **55** | **Yes – Generalize / Suppress** | **High inference risk.** In a feeder with only 11 businesses, a dedicated ""shop/hairdresser"" consumption category can effectively **identify a specific business** and reveal its operating schedule (open/closed days, peak hours). This constitutes **indirect personal data** under GDPR Art. 4(1) (identifies a natural person running the business). Generalize to a broader ""retail/services"" bucket or suppress if the underlying cell < 5 entities. |
+| `g5_bakery_kWh` | **55** | **Yes – Generalize / Suppress** | Same reasoning as `g4`. A ""bakery"" category in a 70-household, 11-business area is a **near-unique identifier** for a specific shop. Reveals operating patterns (e.g., early-morning production peaks). Generalize or suppress. |
+| `g6_weekend_kWh` | **15** | **No** | Aggregate energy consumption by day-type. No individual-level inference. |
+
+## Summary of Key Privacy Principles Applied
+
+1. **Quasi-identifier removal (DPV: `dpv:QuasiIdentifier`):** `feeder` + `substation` form a composite key that, with external knowledge, identifies a specific geographic area → **pseudonymize**.
+2. **Small-cell / k-anonymity risk:** With only 70 housing units and 11 businesses, aggregate values can be **de-aggregated** to infer individual or single-business consumption → **generalize counts** and **suppress/merge specific business categories** (`g4`, `g5`).
+3. **Data minimization (GDPR Art. 5(1)(c)):** The granular business-type breakdowns (`g4_shop_hairdresser`, `g5_bakery`) exceed what is necessary for most grid-planning purposes and should be **merged into broader categories**.
+4. **Temporal precision:** `date` is low-risk at feeder level but should be **generalized to month/quarter** if the dataset leaves the utility's internal environment.
+
+> **Bottom line:** Pseudonymize `feeder` and `substation`; generalize `housing_units_count` and `industry_and_commerce_count`; merge or suppress `g4_shop_hairdresser_kWh` and `g5_bakery_kWh`. All remaining columns are aggregate technical/energy data with low re-identification risk and can be published as-is."
+gpt-oss-120b,"**Anonymisation assessment (based on DCAT & DPV concepts – e.g., *dpv:PersonalData*, *dpv:SensitivePersonalData*, *dpv:QuasiIdentifier*, *dpv:NonPersonalData*)**
+
+| **Column**                     | **Confidence Score (%)** | **Anonymization Need** | **Reasoning** |
+|--------------------------------|---------------------------|------------------------|----------------|
+| feeder                         | 5 %                       | No                     | Technical identifier of the electrical feeder; it does not refer to a natural person and is not a quasi‑identifier. Classified as *dpv:NonPersonalData*. |
+| substation                     | 5 %                       | No                     | Same as *feeder* – an infrastructure code, not linked to individuals. *dpv:NonPersonalData*. |
+| date                           | 10 %                      | No (but consider masking granularity) | A pure calendar date is not personal, but when combined with other quasi‑identifiers it could increase re‑identification risk. If the dataset were to be released publicly, consider coarsening to month/quarter. |
+| housing_units_count            | 20 %                      | **Yes (optional)**     | Counts of dwellings in a small feeder area can act as a *dpv:QuasiIdentifier* (especially if the area is limited). If the feeder serves few houses, the count could indirectly identify a household. Anonymisation (e.g., rounding, binning) reduces this risk. |
+| industry_and_commerce_count    | 15 %                      | **Yes (optional)**     | Similar to *housing_units_count*; the number of commercial premises may be a quasi‑identifier in low‑density zones. Aggregation or suppression is advisable when publishing. |
+| storage_heaters_kW              | 5 %                       | No                     | Pure technical measurement of installed capacity; no link to persons. |
+| heat_pumps_kW                  | 5 %                       | No                     | Technical metric, non‑personal. |
+| electric_heaters_kW            | 5 %                       | No                     | Technical metric, non‑personal. |
+| hot_water_tanks_kW             | 5 %                       | No                     | Technical metric, non‑personal. |
+| flow‑type_heaters_kW           | 5 %                       | No                     | Technical metric, non‑personal. |
+| EV_chargers_kW                 | 5 %                       | No                     | Technical metric, non‑personal. |
+| public_lighting_kW            | 5 %                       | No                     | Technical metric, non‑personal. |
+| other_consumers_kW             | 5 %                       | No                     | Technical metric, non‑personal. |
+| batteries_kW                   | 5 %                       | No                     | Technical metric, non‑personal. |
+| PV_systems_kW                  | 5 %                       | No                     | Technical metric, non‑personal. |
+| chp_kW                         | 5 %                       | No                     | Technical metric, non‑personal. |
+| g0_general_kWh                 | 5 %                       | No                     | Energy consumption aggregate; not linked to individuals. |
+| g1_workdays_kWh                | 5 %                       | No                     | Same as above. |
+| g2_evening_kWh                 | 5 %                       | No                     | Same as above. |
+| g3_continuous_kWh              | 5 %                       | No                     | Same as above. |
+| g4_shop_hairdresser_kWh        | 10 %                      | **Yes (optional)**     | The column name reveals a specific commercial activity (hairdresser). In a very small feeder, the presence/absence of such a load could be a quasi‑identifier for a particular business, potentially exposing business‑sensitive information. Consider rounding or grouping. |
+| g5_bakery_kWh                  | 10 %                      | **Yes (optional)**     | Same reasoning as *g4_shop_hairdresser_kWh* – a niche load type that may identify a specific bakery in a limited area. |
+| g6_weekend_kWh                 | 5 %                       | No                     | General weekend consumption; non‑personal. |
+
+### Summary of Recommendations
+* **High‑confidence non‑personal columns** (all technical capacity and generic consumption metrics) can be released as‑is.
+* **Quasi‑identifiers** (*housing_units_count*, *industry_and_commerce_count*, *g4_shop_hairdresser_kWh*, *g5_bakery_kWh*) should be **anonymised** (e.g., rounding to the nearest 5‑10 units, binning into ranges, or suppressing for very small feeders) to mitigate re‑identification risk.
+* **Temporal granularity**: If the dataset is to be public, consider reducing the date precision (e.g., month‑level) to further lower linkage risk, though the current confidence for *date* is low.  
+
+Applying these measures aligns with the **DPV principles** of **data minimisation**, **purpose limitation**, and **risk‑based protection** while preserving the utility of the energy‑usage dataset."

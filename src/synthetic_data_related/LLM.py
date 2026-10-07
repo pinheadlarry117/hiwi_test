@@ -1,6 +1,7 @@
 from openai import OpenAI
 import pandas as pd
 from pathlib import Path
+import json
 
 
 def load_data(input_file, nrows_preview=10):
@@ -29,13 +30,30 @@ Table Preview:
 {table_preview}
 
 Instructions:
-1. Can you read the website: https://w3c-cg.github.io/dpv/2.3/pd/? If yes, please read the website and give me the authors and contributors of the website. If not, please ignore this instruction.
-2. Review the table and column names.
-3. Give a confidence score (%) for every column.
-4. Identify columns that should be anonymized.
-5. Explain the reasons based on privacy and data protection principles.
-6. Return the answer in a structured format.
+1. Review the table and column names
+2. For every column provide: confidence_score in percentage about the likelihood of needing anonymization, anonymization_need (Yes/No) and reasoning
+
+Return ONLY valid JSON in this format:
+
+{{
+  "columns": [
+    {{
+      "column": "column_name",
+      "confidence_score": 95,
+      "anonymization_need": "Yes",
+      "reasoning": "reason"
+    }}
+  ]
+}}
+
+Do not return markdown.
+Do not return explanations outside the JSON.
+
+3. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
 """
+
+
+
 
 
 def analyze_with_model(
@@ -92,17 +110,44 @@ def analyze_columns(
             model_name=model,
             prompt=prompt
         )
+        
+        try:
+            parsed_answer = json.loads(answer)
+        except Exception:
+            parsed_answer = {
+                "raw_response": answer
+            }
 
         results.append(
             {
                 "model": model,
-                "response": answer
+                "response": parsed_answer
             }
         )
 
     return pd.DataFrame(results)
 
 
+def save_results(df, output_file):
+    Path(output_file).parent.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    records = df.to_dict(orient="records")
+
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(
+            records,
+            f,
+            ensure_ascii=False,
+            indent=4
+        )
+
+    print(f"Results saved to: {output_file}")
+
+
+"""
 def save_results(df, output_file):
     Path(output_file).parent.mkdir(
         parents=True,
@@ -116,20 +161,17 @@ def save_results(df, output_file):
     )
 
     print(f"Results saved to: {output_file}")
-
+"""
 
 def main():
 
     INPUT_FILE = "data/input/feeder_metadata.csv"
-    OUTPUT_FILE = "data/output/anonymization_analysis.csv"
+    OUTPUT_FILE = "data/output/anonymization_analysis_test.json"
 
     MODELS = [
         "mistral-small-4-119b-2603",
         "qwen3.8-27b",
-        "gpt-oss-120b",
-        "gpt-6-astra",
-        "gpt-6-sol",
-        "gpt-6-luna",
+        "gpt-oss-120b"
     ]
 
     BASE_URL = "https://chat.kiconnect.nrw/api/v1"
@@ -152,3 +194,58 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+"""
+You are a knowledgeable assistant who helps decide which columns should be anonymized.
+
+Columns:
+{column_names}
+
+Table Preview:
+{table_preview}
+
+For every column provide:
+- confidence_score (0-100)
+- anonymization_need (Yes/No)
+- reasoning
+
+Return ONLY valid JSON in this format:
+
+{{
+  "columns": [
+    {{
+      "column": "column_name",
+      "confidence_score": 95,
+      "anonymization_need": "Yes",
+      "reasoning": "reason"
+    }}
+  ]
+}}
+
+Do not return markdown.
+Do not return explanations outside the JSON.
+"""
+
+
+"""
+You are a knowledgeable assistant who helps decide which columns should be anonymized.
+
+You have expert knowledge of:
+- Data Catalog Vocabulary (DCAT)
+- Data Privacy Vocabulary (DPV)
+
+Columns:
+{column_names}
+
+Table Preview:
+{table_preview}
+
+Instructions:
+
+1. Review the table and column names.
+2. Give a confidence score related to the anonymization need (%) for every column and identify columns that should be anonymized.
+3. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
+5. Return the answer of second instruction in the following structured format: | **Column**                     | **Confidence Score (%)** | **Anonymization Need** | **Reasoning** |.
+"""

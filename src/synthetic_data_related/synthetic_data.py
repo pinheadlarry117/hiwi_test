@@ -228,6 +228,7 @@ def run_pipeline(
         f"{dataset_name}_original.csv",
     )
 
+    """
     filtered_path = save_filtered_data(
         data,
         results_root,
@@ -235,15 +236,18 @@ def run_pipeline(
     )
 
     filtered_data = pd.read_csv(filtered_path)
+    """
 
     metadata = build_metadata(
-        filtered_data,
+        #filtered_data,
+        data,
         metadata_dir
         / f"{dataset_name}_metadata.json",
     )
 
     gaussian_score = run_gaussian(
-        filtered_data,
+        #filtered_data,
+        data,
         metadata,
         gauss_dir,
         dataset_name,
@@ -251,7 +255,8 @@ def run_pipeline(
     )
 
     ctgan_score = run_ctgan(
-        filtered_data,
+        #filtered_data,
+        data,
         metadata,
         ctgan_dir,
         dataset_name,
