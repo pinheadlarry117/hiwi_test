@@ -45,12 +45,8 @@ def load_ontology(ontology_file, max_triples=500):
 
 def get_prompt(column_names, table_preview, ontology_context):
     return f"""
-Review the ontology context.
-
 Ontology Context:
 {ontology_context}
-
-Then help to decide which columns should be anonymized.
 
 Columns:
 {column_names}
@@ -59,8 +55,10 @@ Table Preview:
 {table_preview}
 
 Instructions:
-1. Review the table and column names
-2. For every column provide: confidence_score in percentage about the likelihood of needing anonymization, anonymization_need (Yes/No) and reasoning
+1. Review the ontology context.
+2. How many classes and properties are there in the ontology context?  Give a brief summary of the ontology context.
+3. Review the table and column names
+4. For every column provide: confidence_score in percentage about the likelihood of needing anonymization, anonymization_need (Yes/No) and reasoning
 
 Return ONLY valid JSON in this format:
 
@@ -78,7 +76,7 @@ Return ONLY valid JSON in this format:
 Do not return markdown.
 Do not return explanations outside the JSON.
 
-3. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
+5. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
 """
 
 
@@ -99,7 +97,8 @@ def analyze_with_model(
                     "content": prompt
                 }
             ],
-            temperature=0
+            temperature=0,
+            response_format={"type": "json_object"}
         )
 
         return response.choices[0].message.content
@@ -199,7 +198,7 @@ def save_results(df, output_file):
 def main():
 
     INPUT_FILE = "data/input/feeder_metadata.csv"
-    OUTPUT_FILE = "data/output/anonymization_analysis_test_with_onto.json"
+    OUTPUT_FILE = "data/output/anonymization_analysis_test_with_onto_1.json"
 
     MODELS = [
         "mistral-small-4-119b-2603",
