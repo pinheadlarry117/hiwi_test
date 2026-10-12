@@ -175,7 +175,7 @@ def main():
     ]
 
     BASE_URL = "https://chat.kiconnect.nrw/api/v1"
-    API_KEY = "6ac61f2ca11743f967d7c686:VQlEPyntZx5RB43ljtx/HvZr5BQMkCRB8da5Q8IpPow="
+    API_KEY = "6accc00f0e6d635d72fb716c:+EZitVoIXtGMayhAle8wKzGvzx3Uy/+yVT1hA0Sx8yY="
 
     results_df = analyze_columns(
         input_file=INPUT_FILE,
@@ -248,4 +248,41 @@ Instructions:
 2. Give a confidence score related to the anonymization need (%) for every column and identify columns that should be anonymized.
 3. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
 5. Return the answer of second instruction in the following structured format: | **Column**                     | **Confidence Score (%)** | **Anonymization Need** | **Reasoning** |.
+"""
+
+"""
+Review the ontology context.
+
+Ontology Context:
+{ontology_context}
+
+Then help to decide which columns should be anonymized.
+
+Columns:
+{column_names}
+
+Table Preview:
+{table_preview}
+
+Instructions:
+1. Review the table and column names
+2. For every column provide: confidence_score in percentage about the likelihood of needing anonymization, anonymization_need (Yes/No) and reasoning
+
+Return ONLY valid JSON in this format:
+
+{{
+  "columns": [
+    {{
+      "column": "column_name",
+      "confidence_score": 95,
+      "anonymization_need": "Yes",
+      "reasoning": "reason"
+    }}
+  ]
+}}
+
+Do not return markdown.
+Do not return explanations outside the JSON.
+
+3. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
 """
