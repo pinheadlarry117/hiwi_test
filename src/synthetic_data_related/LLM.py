@@ -166,7 +166,7 @@ def save_results(df, output_file):
 def main():
 
     INPUT_FILE = "data/input/feeder_metadata.csv"
-    OUTPUT_FILE = "data/output/anonymization_analysis_test.json"
+    OUTPUT_FILE = "data/output/without_onto/anonymization_analysis_test_3.json"
 
     MODELS = [
         "mistral-small-4-119b-2603",

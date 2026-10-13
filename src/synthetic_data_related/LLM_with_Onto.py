@@ -16,10 +16,23 @@ def load_data(input_file, nrows_preview=10):
     return data, preview
 
 
+
+def load_ontology_json(json_file):
+    json_file = Path(json_file)
+
+    with json_file.open("r", encoding="utf-8") as f:
+        ontology = json.load(f)
+
+    return ontology
+
+
+
+
+"""
 def load_ontology(ontology_file, max_triples=500):
-    """
-    Convert ontology triples into text for the LLM.
-    """
+    
+    #Convert ontology triples into text for the LLM.
+    
 
     g = Graph()
     g.parse(str(ontology_file))
@@ -41,7 +54,7 @@ def load_ontology(ontology_file, max_triples=500):
         )
 
     return "\n".join(triples)
-
+"""
 
 def get_prompt(column_names, table_preview, ontology_context):
     return f"""
@@ -100,8 +113,16 @@ def analyze_with_model(
             temperature=0,
             response_format={"type": "json_object"}
         )
+        print(response)
+        #return response.choices[0].message.content
+        msg = response.choices[0].message
 
-        return response.choices[0].message.content
+        print("CONTENT:", repr(msg.content))
+
+        if hasattr(msg, "reasoning"):
+            print("REASONING:", repr(msg.reasoning))
+
+        return msg.content
 
     except Exception as e:
         return f"ERROR: {str(e)}"
@@ -119,7 +140,7 @@ def analyze_columns(
     table_preview = preview.to_dict(orient="records")
     column_names = data.columns.tolist()
 
-    ontology_context = load_ontology(ontology_file, max_triples=500)
+    ontology_context = load_ontology_json(ontology_file)
 
     prompt = get_prompt(
         column_names=column_names,
@@ -198,7 +219,7 @@ def save_results(df, output_file):
 def main():
 
     INPUT_FILE = "data/input/feeder_metadata.csv"
-    OUTPUT_FILE = "data/output/anonymization_analysis_test_with_onto_1.json"
+    OUTPUT_FILE = "data/output/with_onto/anonymization_analysis_test_with_onto_4.json"
 
     MODELS = [
         "mistral-small-4-119b-2603",
@@ -211,7 +232,7 @@ def main():
 
     results_df = analyze_columns(
         input_file=INPUT_FILE,
-        ontology_file=r"C:\Users\yga-hzh\Downloads\pd-owl.rdf",
+        ontology_file=r"C:\Users\yga-hzh\Downloads\hiwi\hiwi_test\data\output\pd.json",
         base_url=BASE_URL,
         api_key=API_KEY,
         models=MODELS

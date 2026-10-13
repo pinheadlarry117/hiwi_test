@@ -1,0 +1,159 @@
+[
+    {
+        "model": "mistral-small-4-119b-2603",
+        "response": {
+            "raw_response": "```json\n{\n  \"columns\": [\n    {\n      \"column\": \"feeder\",\n      \"confidence_score\": 10,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Feeder is an identifier for a specific electrical distribution line and does not directly relate to personal data or sensitive information.\"\n    },\n    {\n      \"column\": \"substation\",\n      \"confidence_score\": 10,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Substation is an identifier for a specific electrical substation and does not directly relate to personal data or sensitive information.\"\n    },\n    {\n      \"column\": \"date\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Date is a temporal reference and does not inherently contain personal or sensitive information unless combined with other data.\"\n    },\n    {\n      \"column\": \"housing_units_count\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Housing units count is aggregate data and does not relate to identifiable individuals or sensitive attributes.\"\n    },\n    {\n      \"column\": \"industry_and_commerce_count\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Industry and commerce count is aggregate data and does not relate to identifiable individuals or sensitive attributes.\"\n    },\n    {\n      \"column\": \"storage_heaters_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Storage heaters capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"heat_pumps_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Heat pumps capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"electric_heaters_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Electric heaters capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"hot_water_tanks_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Hot water tanks capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"flow-type_heaters_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Flow-type heaters capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"EV_chargers_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"EV chargers capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"public_lighting_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Public lighting capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"other_consumers_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Other consumers capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"batteries_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Batteries capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"PV_systems_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"PV systems capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"chp_kW\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"CHP capacity is technical data about infrastructure and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"g0_general_kWh\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"General electricity consumption is aggregate technical data and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"g1_workdays_kWh\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Workdays electricity consumption is aggregate technical data and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"g2_evening_kWh\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Evening electricity consumption is aggregate technical data and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"g3_continuous_kWh\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Continuous electricity consumption is aggregate technical data and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"g4_shop_hairdresser_kWh\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Shop and hairdresser electricity consumption is aggregate technical data and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"g5_bakery_kWh\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Bakery electricity consumption is aggregate technical data and does not relate to personal or sensitive information.\"\n    },\n    {\n      \"column\": \"g6_weekend_kWh\",\n      \"confidence_score\": 5,\n      \"anonymization_need\": \"No\",\n      \"reasoning\": \"Weekend electricity consumption is aggregate technical data and does not relate to personal or sensitive information.\"\n    }\n  ]\n}\n```"
+        }
+    },
+    {
+        "model": "qwen3.8-27b",
+        "response": {
+            "raw_response": null
+        }
+    },
+    {
+        "model": "gpt-oss-120b",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Represents an infrastructure identifier, not linked to any individual; does not constitute personal data."
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Infrastructure identifier without personal relevance; not personal data."
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 95,
+                    "anonymization_need": "No",
+                    "reasoning": "A calendar date alone does not identify a person; only becomes personal when combined with other identifiers, which are absent."
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated count of housing units; no individual-level information."
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated count of businesses; not personal data."
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of heater capacity; unrelated to personal identity."
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical metric; does not identify individuals."
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical metric; no personal data."
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical metric; not personal."
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical metric; does not contain personal identifiers."
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical metric about electric vehicle chargers; not personal data."
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate technical data; no link to individuals."
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption figure; not personal."
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement; no personal identifiers."
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical metric about photovoltaic systems; not personal data."
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical metric for combined heat and power; unrelated to personal identity."
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated energy consumption; no personal identifiers."
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption for workdays; not personal data."
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated evening consumption; no personal identifiers."
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated continuous consumption; not personal."
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption for specific shop types; no personal data."
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated bakery consumption; not personal."
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 99,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated weekend consumption; no personal identifiers."
+                }
+            ]
+        }
+    }
+]

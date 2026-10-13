@@ -1,0 +1,1392 @@
+{
+  "classes": [
+    {
+      "name": "BrowsingReferral",
+      "uri": "https://w3id.org/dpv/pd/owl#BrowsingReferral",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PhilosophicalBelief",
+      "uri": "https://w3id.org/dpv/pd/owl#PhilosophicalBelief",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CreditWorthiness",
+      "uri": "https://w3id.org/dpv/pd/owl#CreditWorthiness",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "EmailContent",
+      "uri": "https://w3id.org/dpv/pd/owl#EmailContent",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Password",
+      "uri": "https://w3id.org/dpv/pd/owl#Password",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FinancialStatus",
+      "uri": "https://w3id.org/dpv/pd/owl#FinancialStatus",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CreditCardNumber",
+      "uri": "https://w3id.org/dpv/pd/owl#CreditCardNumber",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Weight",
+      "uri": "https://w3id.org/dpv/pd/owl#Weight",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Transaction",
+      "uri": "https://w3id.org/dpv/pd/owl#Transaction",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Street",
+      "uri": "https://w3id.org/dpv/pd/owl#Street",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "LoanRecord",
+      "uri": "https://w3id.org/dpv/pd/owl#LoanRecord",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Attitude",
+      "uri": "https://w3id.org/dpv/pd/owl#Attitude",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Ownership",
+      "uri": "https://w3id.org/dpv/pd/owl#Ownership",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "VehicleUsage",
+      "uri": "https://w3id.org/dpv/pd/owl#VehicleUsage",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CriminalPardon",
+      "uri": "https://w3id.org/dpv/pd/owl#CriminalPardon",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "ProfessionalTraining",
+      "uri": "https://w3id.org/dpv/pd/owl#ProfessionalTraining",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "IndividualProfile",
+      "uri": "https://w3id.org/dpv/pd/owl#IndividualProfile",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "EmailAddress",
+      "uri": "https://w3id.org/dpv/pd/owl#EmailAddress",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "VoiceMail",
+      "uri": "https://w3id.org/dpv/pd/owl#VoiceMail",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "DeviceOperatingSystem",
+      "uri": "https://w3id.org/dpv/pd/owl#DeviceOperatingSystem",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Mood",
+      "uri": "https://w3id.org/dpv/pd/owl#Mood",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "MedicalHealth",
+      "uri": "https://w3id.org/dpv/pd/owl#MedicalHealth",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "ProfessionalEvaluation",
+      "uri": "https://w3id.org/dpv/pd/owl#ProfessionalEvaluation",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "SocialMediaCommunication",
+      "uri": "https://w3id.org/dpv/pd/owl#SocialMediaCommunication",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Job",
+      "uri": "https://w3id.org/dpv/pd/owl#Job",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "SexualPreference",
+      "uri": "https://w3id.org/dpv/pd/owl#SexualPreference",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Region",
+      "uri": "https://w3id.org/dpv/pd/owl#Region",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Race",
+      "uri": "https://w3id.org/dpv/pd/owl#Race",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Friend",
+      "uri": "https://w3id.org/dpv/pd/owl#Friend",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PhysicalAddress",
+      "uri": "https://w3id.org/dpv/pd/owl#PhysicalAddress",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Fetish",
+      "uri": "https://w3id.org/dpv/pd/owl#Fetish",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Biometric",
+      "uri": "https://w3id.org/dpv/pd/owl#Biometric",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "LinkClicked",
+      "uri": "https://w3id.org/dpv/pd/owl#LinkClicked",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "GeneralReputation",
+      "uri": "https://w3id.org/dpv/pd/owl#GeneralReputation",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Opinion",
+      "uri": "https://w3id.org/dpv/pd/owl#Opinion",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Internal",
+      "uri": "https://w3id.org/dpv/pd/owl#Internal",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Income",
+      "uri": "https://w3id.org/dpv/pd/owl#Income",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Dislike",
+      "uri": "https://w3id.org/dpv/pd/owl#Dislike",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "BankAccount",
+      "uri": "https://w3id.org/dpv/pd/owl#BankAccount",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FamilyHealthHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#FamilyHealthHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "HouseNumber",
+      "uri": "https://w3id.org/dpv/pd/owl#HouseNumber",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PaymentCardNumber",
+      "uri": "https://w3id.org/dpv/pd/owl#PaymentCardNumber",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Interaction",
+      "uri": "https://w3id.org/dpv/pd/owl#Interaction",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "IndividualHealthHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#IndividualHealthHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "EducationExperience",
+      "uri": "https://w3id.org/dpv/pd/owl#EducationExperience",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Divorce",
+      "uri": "https://w3id.org/dpv/pd/owl#Divorce",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "TradeUnionMembership",
+      "uri": "https://w3id.org/dpv/pd/owl#TradeUnionMembership",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "HealthRecord",
+      "uri": "https://w3id.org/dpv/pd/owl#HealthRecord",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "ProfessionalInterview",
+      "uri": "https://w3id.org/dpv/pd/owl#ProfessionalInterview",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "SecretText",
+      "uri": "https://w3id.org/dpv/pd/owl#SecretText",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "AuthenticationHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#AuthenticationHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "WorkEnvironment",
+      "uri": "https://w3id.org/dpv/pd/owl#WorkEnvironment",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FinancialAccount",
+      "uri": "https://w3id.org/dpv/pd/owl#FinancialAccount",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "External",
+      "uri": "https://w3id.org/dpv/pd/owl#External",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "KnowledgeBelief",
+      "uri": "https://w3id.org/dpv/pd/owl#KnowledgeBelief",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Personality",
+      "uri": "https://w3id.org/dpv/pd/owl#Personality",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "SocialMedia",
+      "uri": "https://w3id.org/dpv/pd/owl#SocialMedia",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "SkinTone",
+      "uri": "https://w3id.org/dpv/pd/owl#SkinTone",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Communication",
+      "uri": "https://w3id.org/dpv/pd/owl#Communication",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Prescription",
+      "uri": "https://w3id.org/dpv/pd/owl#Prescription",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Education",
+      "uri": "https://w3id.org/dpv/pd/owl#Education",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CreditCapacity",
+      "uri": "https://w3id.org/dpv/pd/owl#CreditCapacity",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Religion",
+      "uri": "https://w3id.org/dpv/pd/owl#Religion",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "BrowserHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#BrowserHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Professional",
+      "uri": "https://w3id.org/dpv/pd/owl#Professional",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Household",
+      "uri": "https://w3id.org/dpv/pd/owl#Household",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Name",
+      "uri": "https://w3id.org/dpv/pd/owl#Name",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "EducationQualification",
+      "uri": "https://w3id.org/dpv/pd/owl#EducationQualification",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Historical",
+      "uri": "https://w3id.org/dpv/pd/owl#Historical",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Country",
+      "uri": "https://w3id.org/dpv/pd/owl#Country",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "UID",
+      "uri": "https://w3id.org/dpv/pd/owl#UID",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PublicLife",
+      "uri": "https://w3id.org/dpv/pd/owl#PublicLife",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Character",
+      "uri": "https://w3id.org/dpv/pd/owl#Character",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Identifying",
+      "uri": "https://w3id.org/dpv/pd/owl#Identifying",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "EmailAddressWork",
+      "uri": "https://w3id.org/dpv/pd/owl#EmailAddressWork",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "VehicleLicense",
+      "uri": "https://w3id.org/dpv/pd/owl#VehicleLicense",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PaymentCardExpiry",
+      "uri": "https://w3id.org/dpv/pd/owl#PaymentCardExpiry",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Dialect",
+      "uri": "https://w3id.org/dpv/pd/owl#Dialect",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Preference",
+      "uri": "https://w3id.org/dpv/pd/owl#Preference",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Identifier",
+      "uri": "https://w3id.org/dpv/pd/owl#Identifier",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Domicile",
+      "uri": "https://w3id.org/dpv/pd/owl#Domicile",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Vehicle",
+      "uri": "https://w3id.org/dpv/pd/owl#Vehicle",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "GroupMembership",
+      "uri": "https://w3id.org/dpv/pd/owl#GroupMembership",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "HealthHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#HealthHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "GPSCoordinate",
+      "uri": "https://w3id.org/dpv/pd/owl#GPSCoordinate",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Purchase",
+      "uri": "https://w3id.org/dpv/pd/owl#Purchase",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "EducationTraining",
+      "uri": "https://w3id.org/dpv/pd/owl#EducationTraining",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "EmploymentHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#EmploymentHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "TechnicalKnowledge",
+      "uri": "https://w3id.org/dpv/pd/owl#TechnicalKnowledge",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CarOwned",
+      "uri": "https://w3id.org/dpv/pd/owl#CarOwned",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PersonalPossession",
+      "uri": "https://w3id.org/dpv/pd/owl#PersonalPossession",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Age",
+      "uri": "https://w3id.org/dpv/pd/owl#Age",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PurchasesAndSpendingHabit",
+      "uri": "https://w3id.org/dpv/pd/owl#PurchasesAndSpendingHabit",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "VoiceCommunicationRecording",
+      "uri": "https://w3id.org/dpv/pd/owl#VoiceCommunicationRecording",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "GroupProfile",
+      "uri": "https://w3id.org/dpv/pd/owl#GroupProfile",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "RoomNumber",
+      "uri": "https://w3id.org/dpv/pd/owl#RoomNumber",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "BrowsingBehaviour",
+      "uri": "https://w3id.org/dpv/pd/owl#BrowsingBehaviour",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Transactional",
+      "uri": "https://w3id.org/dpv/pd/owl#Transactional",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FacialPrint",
+      "uri": "https://w3id.org/dpv/pd/owl#FacialPrint",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Location",
+      "uri": "https://w3id.org/dpv/pd/owl#Location",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Language",
+      "uri": "https://w3id.org/dpv/pd/owl#Language",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PrivacyPreference",
+      "uri": "https://w3id.org/dpv/pd/owl#PrivacyPreference",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "ApartmentOwned",
+      "uri": "https://w3id.org/dpv/pd/owl#ApartmentOwned",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Salary",
+      "uri": "https://w3id.org/dpv/pd/owl#Salary",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "IncomeBracket",
+      "uri": "https://w3id.org/dpv/pd/owl#IncomeBracket",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Authenticating",
+      "uri": "https://w3id.org/dpv/pd/owl#Authenticating",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Thought",
+      "uri": "https://w3id.org/dpv/pd/owl#Thought",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PINCode",
+      "uri": "https://w3id.org/dpv/pd/owl#PINCode",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "City",
+      "uri": "https://w3id.org/dpv/pd/owl#City",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "DrugTestResult",
+      "uri": "https://w3id.org/dpv/pd/owl#DrugTestResult",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "ServiceConsumptionBehaviour",
+      "uri": "https://w3id.org/dpv/pd/owl#ServiceConsumptionBehaviour",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Offspring",
+      "uri": "https://w3id.org/dpv/pd/owl#Offspring",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Association",
+      "uri": "https://w3id.org/dpv/pd/owl#Association",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CreditScore",
+      "uri": "https://w3id.org/dpv/pd/owl#CreditScore",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Connection",
+      "uri": "https://w3id.org/dpv/pd/owl#Connection",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "BloodType",
+      "uri": "https://w3id.org/dpv/pd/owl#BloodType",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PerformanceAtWork",
+      "uri": "https://w3id.org/dpv/pd/owl#PerformanceAtWork",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Tattoo",
+      "uri": "https://w3id.org/dpv/pd/owl#Tattoo",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Acquaintance",
+      "uri": "https://w3id.org/dpv/pd/owl#Acquaintance",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Family",
+      "uri": "https://w3id.org/dpv/pd/owl#Family",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FavouriteMusic",
+      "uri": "https://w3id.org/dpv/pd/owl#FavouriteMusic",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Relationship",
+      "uri": "https://w3id.org/dpv/pd/owl#Relationship",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Emotion",
+      "uri": "https://w3id.org/dpv/pd/owl#Emotion",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Criminal",
+      "uri": "https://w3id.org/dpv/pd/owl#Criminal",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Sexual",
+      "uri": "https://w3id.org/dpv/pd/owl#Sexual",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Genetic",
+      "uri": "https://w3id.org/dpv/pd/owl#Genetic",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "OfficialID",
+      "uri": "https://w3id.org/dpv/pd/owl#OfficialID",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "BirthCountry",
+      "uri": "https://w3id.org/dpv/pd/owl#BirthCountry",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Proclivity",
+      "uri": "https://w3id.org/dpv/pd/owl#Proclivity",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Insurance",
+      "uri": "https://w3id.org/dpv/pd/owl#Insurance",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Accent",
+      "uri": "https://w3id.org/dpv/pd/owl#Accent",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Intention",
+      "uri": "https://w3id.org/dpv/pd/owl#Intention",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "BirthPlace",
+      "uri": "https://w3id.org/dpv/pd/owl#BirthPlace",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Passport",
+      "uri": "https://w3id.org/dpv/pd/owl#Passport",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Height",
+      "uri": "https://w3id.org/dpv/pd/owl#Height",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "School",
+      "uri": "https://w3id.org/dpv/pd/owl#School",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Nationality",
+      "uri": "https://w3id.org/dpv/pd/owl#Nationality",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "MentalHealth",
+      "uri": "https://w3id.org/dpv/pd/owl#MentalHealth",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "HairColour",
+      "uri": "https://w3id.org/dpv/pd/owl#HairColour",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PubliclyAvailableSocialMedia",
+      "uri": "https://w3id.org/dpv/pd/owl#PubliclyAvailableSocialMedia",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Disability",
+      "uri": "https://w3id.org/dpv/pd/owl#Disability",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Residency",
+      "uri": "https://w3id.org/dpv/pd/owl#Residency",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Fingerprint",
+      "uri": "https://w3id.org/dpv/pd/owl#Fingerprint",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "SocialBehaviour",
+      "uri": "https://w3id.org/dpv/pd/owl#SocialBehaviour",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Picture",
+      "uri": "https://w3id.org/dpv/pd/owl#Picture",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "HouseOwned",
+      "uri": "https://w3id.org/dpv/pd/owl#HouseOwned",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "SexualHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#SexualHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PoliticalAffiliation",
+      "uri": "https://w3id.org/dpv/pd/owl#PoliticalAffiliation",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "AgeRange",
+      "uri": "https://w3id.org/dpv/pd/owl#AgeRange",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "DeviceBased",
+      "uri": "https://w3id.org/dpv/pd/owl#DeviceBased",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "DeviceApplications",
+      "uri": "https://w3id.org/dpv/pd/owl#DeviceApplications",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Social",
+      "uri": "https://w3id.org/dpv/pd/owl#Social",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Contact",
+      "uri": "https://w3id.org/dpv/pd/owl#Contact",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FavouriteFood",
+      "uri": "https://w3id.org/dpv/pd/owl#FavouriteFood",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FacialExpression",
+      "uri": "https://w3id.org/dpv/pd/owl#FacialExpression",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Piercing",
+      "uri": "https://w3id.org/dpv/pd/owl#Piercing",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PostalCode",
+      "uri": "https://w3id.org/dpv/pd/owl#PostalCode",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "SocialNetwork",
+      "uri": "https://w3id.org/dpv/pd/owl#SocialNetwork",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CurrentEmployment",
+      "uri": "https://w3id.org/dpv/pd/owl#CurrentEmployment",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FamilyStructure",
+      "uri": "https://w3id.org/dpv/pd/owl#FamilyStructure",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "TravelHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#TravelHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CriminalCharge",
+      "uri": "https://w3id.org/dpv/pd/owl#CriminalCharge",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "VehicalLicenseNumber",
+      "uri": "https://w3id.org/dpv/pd/owl#VehicalLicenseNumber",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PhysicalHealth",
+      "uri": "https://w3id.org/dpv/pd/owl#PhysicalHealth",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CallLog",
+      "uri": "https://w3id.org/dpv/pd/owl#CallLog",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Sibling",
+      "uri": "https://w3id.org/dpv/pd/owl#Sibling",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "MACAddress",
+      "uri": "https://w3id.org/dpv/pd/owl#MACAddress",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CriminalOffence",
+      "uri": "https://w3id.org/dpv/pd/owl#CriminalOffence",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Geographic",
+      "uri": "https://w3id.org/dpv/pd/owl#Geographic",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CurrentLocation",
+      "uri": "https://w3id.org/dpv/pd/owl#CurrentLocation",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "WorkHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#WorkHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "EmailAddressPersonal",
+      "uri": "https://w3id.org/dpv/pd/owl#EmailAddressPersonal",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "MaritalStatus",
+      "uri": "https://w3id.org/dpv/pd/owl#MaritalStatus",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "WorkExperience",
+      "uri": "https://w3id.org/dpv/pd/owl#WorkExperience",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Reliability",
+      "uri": "https://w3id.org/dpv/pd/owl#Reliability",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CriminalConviction",
+      "uri": "https://w3id.org/dpv/pd/owl#CriminalConviction",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "BirthDate",
+      "uri": "https://w3id.org/dpv/pd/owl#BirthDate",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Financial",
+      "uri": "https://w3id.org/dpv/pd/owl#Financial",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Gender",
+      "uri": "https://w3id.org/dpv/pd/owl#Gender",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "ProfessionalExperience",
+      "uri": "https://w3id.org/dpv/pd/owl#ProfessionalExperience",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Sale",
+      "uri": "https://w3id.org/dpv/pd/owl#Sale",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PaymentCard",
+      "uri": "https://w3id.org/dpv/pd/owl#PaymentCard",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "IPAddress",
+      "uri": "https://w3id.org/dpv/pd/owl#IPAddress",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "DeviceSoftware",
+      "uri": "https://w3id.org/dpv/pd/owl#DeviceSoftware",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Ethnicity",
+      "uri": "https://w3id.org/dpv/pd/owl#Ethnicity",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CreditStanding",
+      "uri": "https://w3id.org/dpv/pd/owl#CreditStanding",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "DisciplinaryAction",
+      "uri": "https://w3id.org/dpv/pd/owl#DisciplinaryAction",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "ReligiousBelief",
+      "uri": "https://w3id.org/dpv/pd/owl#ReligiousBelief",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CreditRecord",
+      "uri": "https://w3id.org/dpv/pd/owl#CreditRecord",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "AccountIdentifier",
+      "uri": "https://w3id.org/dpv/pd/owl#AccountIdentifier",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "EthnicOrigin",
+      "uri": "https://w3id.org/dpv/pd/owl#EthnicOrigin",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PersonalDocuments",
+      "uri": "https://w3id.org/dpv/pd/owl#PersonalDocuments",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "WorkLocation",
+      "uri": "https://w3id.org/dpv/pd/owl#WorkLocation",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Retina",
+      "uri": "https://w3id.org/dpv/pd/owl#Retina",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Locality",
+      "uri": "https://w3id.org/dpv/pd/owl#Locality",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Favourite",
+      "uri": "https://w3id.org/dpv/pd/owl#Favourite",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Credit",
+      "uri": "https://w3id.org/dpv/pd/owl#Credit",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "UserAgent",
+      "uri": "https://w3id.org/dpv/pd/owl#UserAgent",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "DNACode",
+      "uri": "https://w3id.org/dpv/pd/owl#DNACode",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "LifeHistory",
+      "uri": "https://w3id.org/dpv/pd/owl#LifeHistory",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FinancialAccountNumber",
+      "uri": "https://w3id.org/dpv/pd/owl#FinancialAccountNumber",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Tracking",
+      "uri": "https://w3id.org/dpv/pd/owl#Tracking",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Username",
+      "uri": "https://w3id.org/dpv/pd/owl#Username",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "FavouriteColour",
+      "uri": "https://w3id.org/dpv/pd/owl#FavouriteColour",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Reference",
+      "uri": "https://w3id.org/dpv/pd/owl#Reference",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PhysicalCharacteristic",
+      "uri": "https://w3id.org/dpv/pd/owl#PhysicalCharacteristic",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PoliticalOpinion",
+      "uri": "https://w3id.org/dpv/pd/owl#PoliticalOpinion",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "DigitalFingerprint",
+      "uri": "https://w3id.org/dpv/pd/owl#DigitalFingerprint",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Interest",
+      "uri": "https://w3id.org/dpv/pd/owl#Interest",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Marriage",
+      "uri": "https://w3id.org/dpv/pd/owl#Marriage",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Demeanour",
+      "uri": "https://w3id.org/dpv/pd/owl#Demeanour",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "SocialStatus",
+      "uri": "https://w3id.org/dpv/pd/owl#SocialStatus",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Like",
+      "uri": "https://w3id.org/dpv/pd/owl#Like",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PhysicalTrait",
+      "uri": "https://w3id.org/dpv/pd/owl#PhysicalTrait",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Vulnerability",
+      "uri": "https://w3id.org/dpv/pd/owl#Vulnerability",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Behavioural",
+      "uri": "https://w3id.org/dpv/pd/owl#Behavioural",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "TVViewingBehaviour",
+      "uri": "https://w3id.org/dpv/pd/owl#TVViewingBehaviour",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Tax",
+      "uri": "https://w3id.org/dpv/pd/owl#Tax",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "ProfessionalCertification",
+      "uri": "https://w3id.org/dpv/pd/owl#ProfessionalCertification",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "HomeLocation",
+      "uri": "https://w3id.org/dpv/pd/owl#HomeLocation",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "VehicalLicenseRegistration",
+      "uri": "https://w3id.org/dpv/pd/owl#VehicalLicenseRegistration",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Profile",
+      "uri": "https://w3id.org/dpv/pd/owl#Profile",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "PastEmployment",
+      "uri": "https://w3id.org/dpv/pd/owl#PastEmployment",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Demographic",
+      "uri": "https://w3id.org/dpv/pd/owl#Demographic",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "TelephoneNumber",
+      "uri": "https://w3id.org/dpv/pd/owl#TelephoneNumber",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Parent",
+      "uri": "https://w3id.org/dpv/pd/owl#Parent",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "AgeExact",
+      "uri": "https://w3id.org/dpv/pd/owl#AgeExact",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "BrowserFingerprint",
+      "uri": "https://w3id.org/dpv/pd/owl#BrowserFingerprint",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "CommunicationsMetadata",
+      "uri": "https://w3id.org/dpv/pd/owl#CommunicationsMetadata",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Citizenship",
+      "uri": "https://w3id.org/dpv/pd/owl#Citizenship",
+      "label": "",
+      "comment": ""
+    },
+    {
+      "name": "Health",
+      "uri": "https://w3id.org/dpv/pd/owl#Health",
+      "label": "",
+      "comment": ""
+    }
+  ],
+  "object_properties": [],
+  "datatype_properties": []
+}

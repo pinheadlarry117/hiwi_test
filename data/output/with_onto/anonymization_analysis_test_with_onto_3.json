@@ -1,0 +1,298 @@
+[
+    {
+        "model": "mistral-small-4-119b-2603",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Feeder is a technical identifier for an electrical distribution component and does not directly relate to personal data or identifiable information."
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Substation is a technical identifier for an electrical infrastructure component and does not relate to personal or identifiable data."
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 30,
+                    "anonymization_need": "No",
+                    "reasoning": "Date alone is not personally identifiable unless combined with other data. It is a temporal reference for energy consumption patterns."
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is aggregate data representing the number of housing units, not individual personal data."
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate count of commercial units, not personal or identifiable information."
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity, not personal data."
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity, not personal data."
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity, not personal data."
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity, not personal data."
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity, not personal data."
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity, not personal data."
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity for public infrastructure, not personal data."
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate technical measurement of electrical capacity, not personal data."
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity, not personal data."
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity from photovoltaic systems, not personal data."
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electrical capacity from combined heat and power systems, not personal data."
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption data, not personal or identifiable information."
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption data during workdays, not personal or identifiable information."
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption data during evening hours, not personal or identifiable information."
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption data for continuous loads, not personal or identifiable information."
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption data for specific commercial activities, not personal or identifiable information."
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption data for bakery operations, not personal or identifiable information."
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption data during weekends, not personal or identifiable information."
+                }
+            ]
+        }
+    },
+    {
+        "model": "qwen3.8-27b",
+        "response": {
+            "raw_response": null
+        }
+    },
+    {
+        "model": "gpt-oss-120b",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 85,
+                    "anonymization_need": "No",
+                    "reasoning": "Represents a technical identifier of a power feeder; does not directly identify an individual and is aggregated across many households."
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 85,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical identifier of a substation; not personal data on its own and applies to many users."
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 80,
+                    "anonymization_need": "No",
+                    "reasoning": "A timestamp of measurement; while it can be combined with other data to pinpoint events, in this context it is a generic record date and not linked to a specific person."
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 95,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated count of housing units; cannot be used to identify an individual."
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 95,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated count of commercial entities; not personal data."
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of installed storage heater capacity; unrelated to personal identity."
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of heat pump capacity; not personal."
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electric heater capacity; not personal."
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of hot water tank capacity; not personal."
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of flow‑type heater capacity; not personal."
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of electric vehicle charger capacity; not personal."
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of public lighting consumption; not personal."
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption of miscellaneous loads; not personal."
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of battery capacity; not personal."
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of photovoltaic system capacity; not personal."
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of combined heat and power capacity; not personal."
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated energy consumption for a generic category; not personal."
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated energy consumption for workday period; not personal."
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated energy consumption for evening period; not personal."
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated continuous consumption; not personal."
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption for shop/hairdresser category; not personal."
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption for bakery category; not personal."
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 98,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated weekend consumption; not personal."
+                }
+            ]
+        }
+    }
+]
