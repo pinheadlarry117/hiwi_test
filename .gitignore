@@ -7,3 +7,7 @@ __pycache__/
 
 data/output/weather_data.csv
 test_results/original_data/weather_data.csv
+
+data/output/weather_data.csv
+test_results/metadata/feeder_metadata_metadata.json
+test_results/original_data/feeder_metadata_metadata.csv
