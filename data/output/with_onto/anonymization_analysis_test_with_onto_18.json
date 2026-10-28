@@ -1,0 +1,748 @@
+[
+    {
+        "model": "mistral-small-4-119b-2603",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 80,
+                    "anonymization_need": "Yes",
+                    "reasoning": "Feeder could potentially identify a specific electrical distribution line or substation configuration, which may indirectly reveal location or infrastructure details that could be sensitive in certain contexts.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Location"
+                        }
+                    ]
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 85,
+                    "anonymization_need": "Yes",
+                    "reasoning": "Substation data could reveal specific electrical infrastructure locations, which may be sensitive as it could indicate critical infrastructure or energy distribution patterns.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Location"
+                        }
+                    ]
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Date information alone is generally not considered personal data unless combined with other identifiers. It represents temporal information which is typically not sensitive.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Time"
+                        }
+                    ]
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is aggregate data about the number of housing units and does not directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Demographic"
+                        }
+                    ]
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is aggregate commercial data that doesn't identify individuals or reveal personal information about specific entities.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Demographic"
+                        }
+                    ]
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data for public infrastructure that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is aggregate technical data about other consumers that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy storage data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyStorage"
+                        }
+                    ]
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical data about photovoltaic systems that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyGeneration"
+                        }
+                    ]
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical data about combined heat and power systems that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyGeneration"
+                        }
+                    ]
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data for commercial activities that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data for commercial activities that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This is technical energy consumption data that doesn't directly identify individuals or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "model": "qwen3.8-27b",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 72,
+                    "anonymization_need": "Yes",
+                    "reasoning": "The feeder identifier, combined with substation, pinpoints a specific geographic area in the electrical grid. With only 70 housing units in this feeder, the identifier effectively narrows the location to a small, identifiable neighborhood. This constitutes location data that can be used to infer the residence or workplace of specific individuals, violating the principle of data minimization and purpose limitation under GDPR.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Location"
+                        },
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Geographic"
+                        }
+                    ]
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 68,
+                    "anonymization_need": "Yes",
+                    "reasoning": "The substation identifier is a geographic location marker that, in combination with the feeder number, identifies a precise area in the power distribution network. This is a form of location data that can be cross-referenced with public infrastructure maps to determine the physical area served, potentially revealing the home or work location of consumers within that zone.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Location"
+                        },
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#PhysicalAddress"
+                        }
+                    ]
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 42,
+                    "anonymization_need": "No",
+                    "reasoning": "The date column provides temporal context for the measurements. While it contributes to the temporal dimension of data, by itself it does not identify an individual. In the context of aggregate grid-level data spanning multiple dates, the date is a standard reporting field and does not constitute personal data. However, it should be considered in combination with other identifiers for re-identification risk assessment.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Historical"
+                        }
+                    ]
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 55,
+                    "anonymization_need": "Yes",
+                    "reasoning": "The housing units count reveals the exact number of residential consumers in a specific feeder area. With only 70 units, this small population size significantly increases re-identification risk. An attacker who knows the total consumption and the number of units could potentially isolate individual consumption patterns through differential analysis. This reveals demographic characteristics of the area and aids in narrowing down specific households.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#HomeLocation"
+                        },
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Demographic"
+                        }
+                    ]
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 48,
+                    "anonymization_need": "No",
+                    "reasoning": "The count of industrial and commercial units is aggregate infrastructure data. While it provides context about the area's economic character, it does not directly identify any specific individual or business. The value of 11 is a general count that does not reveal the identity of specific businesses. The re-identification risk from this column alone is minimal.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#WorkLocation"
+                        }
+                    ]
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "This is an aggregate measurement of total installed capacity for storage heaters across all consumers in the feeder. It does not identify any individual consumer. The value represents a sum across 70+ units, making individual attribution infeasible. It is infrastructure-level data that does not constitute personal data under data protection principles.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate installed capacity for heat pumps across the feeder area. This is a summed infrastructure measurement that does not identify individual consumers. The small value (2.1 kW) relative to the total area does not enable individual attribution. It is non-personal aggregate data.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Total installed capacity for electric heaters in the feeder. This is an aggregate infrastructure measurement spanning all consumers. It does not reveal individual consumption patterns or identify specific households. The data is at the grid infrastructure level and does not constitute personal data.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate installed capacity for hot water tanks across the feeder. This is a summed measurement that does not identify individual consumers. The value represents total infrastructure capacity and cannot be attributed to specific households without additional data. It is non-personal aggregate data.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Total installed capacity for flow-type heaters in the feeder area. This is an aggregate infrastructure measurement that does not identify individual consumers. The data is at the grid level and represents a sum across all connected consumers, making individual attribution infeasible.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate installed capacity for EV chargers in the feeder. The value is 0.0, indicating no EV chargers are present. This is a non-sensitive aggregate infrastructure measurement that does not identify any individual or reveal personal information about consumers in the area.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 30,
+                    "anonymization_need": "No",
+                    "reasoning": "Total installed capacity for public lighting in the feeder area. This is municipal infrastructure data that is inherently public and does not relate to individual consumers. Public lighting is a shared community resource and its capacity data does not constitute personal data or reveal information about specific individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#PublicLife"
+                        }
+                    ]
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate installed capacity for other/miscellaneous consumers in the feeder. This is a summed infrastructure measurement that does not identify individual consumers. The data represents total grid-level capacity and cannot be attributed to specific households or businesses without additional identifying information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate installed capacity for battery storage systems in the feeder. The value is 0.0, indicating no battery storage is present. This is a non-sensitive aggregate infrastructure measurement that does not identify any individual consumer or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate installed capacity for photovoltaic systems in the feeder. The value is 0.0, indicating no PV systems are present. This is a non-sensitive aggregate infrastructure measurement that does not identify individual consumers or reveal personal information about energy generation.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate installed capacity for combined heat and power (CHP) systems in the feeder. This is a summed infrastructure measurement that does not identify individual consumers. The data is at the grid infrastructure level and represents total capacity, making individual attribution infeasible.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption for the general tariff group across all consumers in the feeder. This is a summed measurement that does not identify individual consumers. The value represents total grid-level consumption for a tariff category and cannot be attributed to specific households without additional identifying data.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Transactional"
+                        }
+                    ]
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption for the workdays tariff group in the feeder. This is a summed measurement representing total consumption for a specific tariff category. It does not identify individual consumers and is non-personal aggregate data at the grid infrastructure level.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Transactional"
+                        }
+                    ]
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption for the evening tariff group in the feeder. This is a summed measurement for a specific time-based tariff category. It does not identify individual consumers and represents non-personal aggregate grid data that cannot be attributed to specific households.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Transactional"
+                        }
+                    ]
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption for the continuous tariff group in the feeder. The value is 0.0, indicating no consumption under this tariff. This is a non-sensitive aggregate measurement that does not identify individual consumers or reveal personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Transactional"
+                        }
+                    ]
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption for the shop/hairdresser tariff group in the feeder. This is a summed measurement for a specific commercial tariff category. It does not identify individual businesses or consumers and is non-personal aggregate data at the grid level.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Transactional"
+                        }
+                    ]
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption for the bakery tariff group in the feeder. The value is 0.0, indicating no consumption under this tariff. This is a non-sensitive aggregate measurement that does not identify individual businesses or consumers.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Transactional"
+                        }
+                    ]
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 35,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregate energy consumption for the weekend tariff group in the feeder. The value is 0.0, indicating no consumption under this tariff. This is a non-sensitive aggregate measurement that does not identify individual consumers or reveal personal information about consumption patterns.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Transactional"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "model": "gpt-oss-120b",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "The feeder identifier refers to an electrical distribution component and does not relate to an individual person. It is infrastructure metadata, not personal data.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "The substation identifier is a location of electrical equipment, not linked to any natural person. It does not constitute personal data.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The date records when the measurement was taken. While timestamps can become identifying when combined with other data, in isolation they do not identify an individual and are not considered personal data under typical data protection regimes.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "This column provides an aggregated count of housing units for a feeder area. Aggregated statistics are not personal data because they do not refer to an identifiable individual.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Similar to housing_units_count, this is an aggregated count of non‑personal entities and does not identify any person.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Represents the installed capacity of storage heaters in kilowatts for the feeder area. It is technical infrastructure data, not personal data.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical measurement of heat‑pump capacity, unrelated to any individual.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical attribute of the electrical system, not personal data.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Infrastructure capacity data, not linked to a person.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical specification of heating equipment, not personal data.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Capacity of electric‑vehicle chargers for the feeder; does not identify individuals.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Represents public lighting power consumption, a public infrastructure metric, not personal data.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption of miscellaneous loads, not tied to any person.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical capacity of battery storage, not personal data.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Capacity of photovoltaic systems for the feeder area; infrastructure data, not personal.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Combined heat and power capacity, a technical attribute unrelated to individuals.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated energy consumption for a generic category; does not identify a person.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption during workdays; statistical, not personal.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated evening consumption; not linked to any individual.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated continuous load; not personal data.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption for specific commercial categories; does not identify individuals.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated bakery consumption; not personal data.",
+                    "ontology_evidence": []
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated weekend consumption; statistical, not personal.",
+                    "ontology_evidence": []
+                }
+            ]
+        }
+    }
+]

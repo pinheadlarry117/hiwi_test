@@ -2,6 +2,18 @@ from openai import OpenAI
 import pandas as pd
 from pathlib import Path
 import json
+import re
+
+
+def extract_json(text):
+    text = text.strip()
+
+    # Remove markdown fences
+    text = re.sub(r"^```json\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"^```\s*", "", text)
+    text = re.sub(r"\**```$", "", text)
+
+    return json.loads(text)
 
 
 def load_data(input_file, nrows_preview=10):
@@ -32,8 +44,11 @@ Table Preview:
 Instructions:
 1. Review the table and column names
 2. For every column provide: confidence_score in percentage about the likelihood of needing anonymization, anonymization_need (Yes/No) and reasoning
+3. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
+4. Provide DPV evidence for every column including concept URI from DPV.
 
 Return ONLY valid JSON in this format:
+
 
 {{
   "columns": [
@@ -41,15 +56,21 @@ Return ONLY valid JSON in this format:
       "column": "column_name",
       "confidence_score": 95,
       "anonymization_need": "Yes",
-      "reasoning": "reason"
+      "reasoning": "reason",
+      "DPV_evidence": [
+        {{
+          "source": "DPV",
+          "concept_uri": "<verified concept URI>"
+        }}
+      ]
     }}
   ]
 }}
 
+
 Do not return markdown.
 Do not return explanations outside the JSON.
 
-3. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
 """
 
 
@@ -112,7 +133,8 @@ def analyze_columns(
         )
         
         try:
-            parsed_answer = json.loads(answer)
+            #parsed_answer = json.loads(answer)
+            parsed_answer = extract_json(answer)
         except Exception:
             parsed_answer = {
                 "raw_response": answer
@@ -166,7 +188,7 @@ def save_results(df, output_file):
 def main():
 
     INPUT_FILE = "data/input/feeder_metadata.csv"
-    OUTPUT_FILE = "data/output/without_onto/anonymization_analysis_test_5.json"
+    OUTPUT_FILE = "data/output/without_onto/anonymization_analysis_test_7.json"
 
     MODELS = [
         "mistral-small-4-119b-2603",

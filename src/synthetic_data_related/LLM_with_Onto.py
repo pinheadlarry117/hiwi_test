@@ -71,6 +71,8 @@ Instructions:
 1. Review the ontology context.
 2. Review the table and column names
 3. For every column provide: confidence_score in percentage about the likelihood of needing anonymization, anonymization_need (Yes/No) and reasoning
+4. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
+5. Provide ontology evidence for every column including concept URI from the ontology.
 
 Return ONLY valid JSON in this format:
 
@@ -94,7 +96,7 @@ Return ONLY valid JSON in this format:
 Do not return markdown.
 Do not return explanations outside the JSON.
 
-4. Explain the reasons based on privacy and data protection principles for each column which needs anonymization.
+
 """
 
 
@@ -224,7 +226,7 @@ def save_results(df, output_file):
 def main():
 
     INPUT_FILE = "data/input/feeder_metadata.csv"
-    OUTPUT_FILE = "data/output/with_onto/anonymization_analysis_test_with_onto_10.json"
+    OUTPUT_FILE = "data/output/with_onto/anonymization_analysis_test_with_onto_18.json"
 
     MODELS = [
         "mistral-small-4-119b-2603",

@@ -1,0 +1,951 @@
+[
+    {
+        "model": "mistral-small-4-119b-2603",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'feeder' column appears to be an identifier for a specific electrical feeder line, which is not directly linked to personal or sensitive information about individuals. It is a technical identifier used for grid management.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#identifier"
+                        }
+                    ]
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'substation' column is a technical identifier for a substation, similar to 'feeder'. It does not contain personal or sensitive data about individuals and is used for operational purposes.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#identifier"
+                        }
+                    ]
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'date' column contains temporal data which is not inherently personal or sensitive. It may be necessary for time-series analysis and does not directly identify individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#temporal"
+                        }
+                    ]
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 15,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'housing_units_count' column provides aggregated counts of housing units, which does not reveal personal information about individuals. It is a statistical measure used for planning and analysis.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#statistical"
+                        }
+                    ]
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 15,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'industry_and_commerce_count' column provides aggregated counts of commercial entities, which does not reveal personal information about individuals. It is a statistical measure used for planning and analysis.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#statistical"
+                        }
+                    ]
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'storage_heaters_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'heat_pumps_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'electric_heaters_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'hot_water_tanks_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'flow-type_heaters_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'EV_chargers_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'public_lighting_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'other_consumers_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'batteries_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'PV_systems_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'chp_kW' column contains technical data about electrical infrastructure capacity, not personal or sensitive information about individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#technical"
+                        }
+                    ]
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'g0_general_kWh' column contains aggregated energy consumption data, which does not reveal personal information about individuals. It is a statistical measure used for analysis.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#statistical"
+                        }
+                    ]
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'g1_workdays_kWh' column contains aggregated energy consumption data, which does not reveal personal information about individuals. It is a statistical measure used for analysis.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#statistical"
+                        }
+                    ]
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'g2_evening_kWh' column contains aggregated energy consumption data, which does not reveal personal information about individuals. It is a statistical measure used for analysis.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#statistical"
+                        }
+                    ]
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'g3_continuous_kWh' column contains aggregated energy consumption data, which does not reveal personal information about individuals. It is a statistical measure used for analysis.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#statistical"
+                        }
+                    ]
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'g4_shop_hairdresser_kWh' column contains aggregated energy consumption data for specific commercial categories, which does not reveal personal information about individuals. It is a statistical measure used for analysis.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#statistical"
+                        }
+                    ]
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'g5_bakery_kWh' column contains aggregated energy consumption data for specific commercial categories, which does not reveal personal information about individuals. It is a statistical measure used for analysis.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#statistical"
+                        }
+                    ]
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The 'g6_weekend_kWh' column contains aggregated energy consumption data, which does not reveal personal information about individuals. It is a statistical measure used for analysis.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "http://www.w3.org/ns/dcat#statistical"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "model": "qwen3.8-27b",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 25,
+                    "anonymization_need": "No",
+                    "reasoning": "The feeder column is a numeric infrastructure identifier (e.g., 1) that designates a section of the electrical distribution grid. It does not directly identify any natural person. While it could serve as a quasi-identifier in combination with other datasets, at the feeder level covering 70+ housing units, it does not meet the threshold for personal data under GDPR Article 4(1). It is an infrastructure asset identifier, not a personal identifier.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/Identifier"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/QuasiIdentifier"
+                        }
+                    ]
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 25,
+                    "anonymization_need": "No",
+                    "reasoning": "The substation column is a numeric infrastructure identifier for a power substation. Similar to the feeder, it identifies a physical electrical infrastructure asset rather than a natural person. It does not constitute personal data as defined in GDPR. The combination of feeder and substation identifies a grid segment, not an individual.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/Identifier"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/QuasiIdentifier"
+                        }
+                    ]
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 15,
+                    "anonymization_need": "No",
+                    "reasoning": "The date column contains temporal information (e.g., 2023-04-01) indicating when measurements were taken. It is not personal data as it does not identify or relate to an identified or identifiable natural person. Temporal data at the feeder level is a standard measurement timestamp and does not reveal individual behavior patterns given the aggregate nature of the data (70+ households).",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/TemporalData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        }
+                    ]
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 20,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the aggregate count of housing units (70-72) connected to a feeder. It is statistical/demographic data at the infrastructure level, not personal data. It does not identify any specific household or individual. The value is a count, not an identifier, and is already aggregated across many units.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 20,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the aggregate count of industry and commerce units (11) connected to a feeder. It is statistical data at the infrastructure level. It does not identify any specific business or individual. The value is a count representing aggregate commercial activity in the feeder area.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of storage heaters across all consumers on the feeder. It is aggregate infrastructure capacity data. It does not identify any individual consumer or household. The value represents a sum across 70+ units and cannot be attributed to a specific data subject.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of heat pumps across all consumers on the feeder. It is aggregate infrastructure capacity data that does not identify any individual. The value is a sum across multiple consumers and cannot be linked to a specific data subject.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of electric heaters across all consumers on the feeder. It is aggregate infrastructure capacity data. It does not identify any individual consumer and represents a sum across 70+ housing units.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of hot water tanks across all consumers on the feeder. It is aggregate infrastructure capacity data that does not identify any individual. The value is a sum across multiple consumers.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of flow-type heaters across all consumers on the feeder. It is aggregate infrastructure capacity data. It does not identify any individual consumer or household.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of EV chargers across all consumers on the feeder. It is aggregate infrastructure capacity data. The value (0.0 in the preview) represents a sum across all consumers and does not identify any individual.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of public lighting on the feeder. It is aggregate infrastructure data related to municipal/public assets. It does not identify any individual and represents public infrastructure capacity.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of other/miscellaneous consumers on the feeder. It is aggregate infrastructure capacity data. It does not identify any individual consumer and represents a sum across multiple consumers.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of battery storage systems on the feeder. It is aggregate infrastructure capacity data. It does not identify any individual consumer or household.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of photovoltaic (solar) systems on the feeder. It is aggregate infrastructure capacity data. It does not identify any individual consumer or household.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains the total installed capacity (kW) of combined heat and power (CHP) systems on the feeder. It is aggregate infrastructure capacity data. It does not identify any individual consumer or household.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 15,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains aggregate general electricity consumption (kWh) for the entire feeder. It is a sum across 70+ housing units and 11 commercial units. The data is already at an aggregate level and cannot be attributed to any specific individual consumer. It does not constitute personal data.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 15,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains aggregate workday electricity consumption (kWh) for the entire feeder. It is a sum across all consumers on the feeder. The data is at an aggregate level and cannot be attributed to any specific individual. It represents collective consumption patterns.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 15,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains aggregate evening electricity consumption (kWh) for the entire feeder. It is a sum across all consumers. While evening consumption patterns could theoretically reveal behavioral information, at the feeder level with 70+ units, the data is sufficiently aggregated to prevent re-identification of any individual.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 15,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains aggregate continuous electricity consumption (kWh) for the entire feeder. It is a sum across all consumers. The data is at an aggregate level and cannot be attributed to any specific individual consumer.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 20,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains aggregate electricity consumption (kWh) specifically from shop/hairdresser businesses on the feeder. While it reveals the presence of specific business types, it is still aggregate data at the feeder level. It does not identify a specific business or individual. The category label is a consumption profile type, not a business identifier.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 20,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains aggregate electricity consumption (kWh) specifically from bakery businesses on the feeder. While it reveals the presence of a bakery, it is aggregate data at the feeder level. It does not identify a specific business or individual. The value (0.0 in preview) indicates no bakery consumption recorded.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 15,
+                    "anonymization_need": "No",
+                    "reasoning": "This column contains aggregate weekend electricity consumption (kWh) for the entire feeder. It is a sum across all consumers. The data is at an aggregate level and cannot be attributed to any specific individual consumer. It represents collective weekend consumption patterns.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/AggregateData"
+                        },
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv/v11/InfrastructureData"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "model": "gpt-oss-120b",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "The feeder identifier is an infrastructure code that does not refer to an individual or household. It is aggregated technical metadata and therefore not personal data under GDPR.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Substation is a physical asset identifier. It does not identify a natural person and is considered non‑personal technical information.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "A calendar date alone is not personal data. Only when combined with other identifiers could it become identifying, but in this table it is used as a temporal dimension for aggregated measurements.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 8,
+                    "anonymization_need": "No",
+                    "reasoning": "The column reports a count of housing units per feeder/substation. It is statistical aggregate information and does not disclose any individual's identity.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#AggregatedData"
+                        }
+                    ]
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 8,
+                    "anonymization_need": "No",
+                    "reasoning": "This is an aggregated count of industry/commercial entities in the area. It does not contain personal identifiers and is therefore non‑personal data.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#AggregatedData"
+                        }
+                    ]
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Power capacity of storage heaters is a technical attribute of the network segment, not linked to any individual user.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated capacity of heat pumps per feeder is technical infrastructure data, not personal data.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Represents summed electric heater capacity for the area; it is aggregated and non‑identifying.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated technical measurement, not linked to any natural person.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Technical aggregate data about flow‑type heaters; does not identify individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Total capacity of EV chargers per feeder is infrastructure data, not personal data.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated power consumption of public lighting; unrelated to personal identifiers.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Represents miscellaneous aggregated consumption; no personal data is disclosed.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated battery capacity for the network segment; not personal data.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Total photovoltaic system capacity per feeder; technical aggregate information, not personal.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Combined heat and power capacity is an aggregated metric, unrelated to any individual's identity.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#NonPersonalData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "General energy consumption aggregated at the feeder level; does not contain personal identifiers.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#AggregatedData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated consumption for workdays; statistical data without personal reference.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#AggregatedData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated evening consumption; non‑personal statistical information.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#AggregatedData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Continuous consumption aggregated per feeder; does not identify individuals.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#AggregatedData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Energy use attributed to a specific commercial category is aggregated; no personal data is disclosed.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#AggregatedData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Aggregated bakery consumption; statistical and non‑personal.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#AggregatedData"
+                        }
+                    ]
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 5,
+                    "anonymization_need": "No",
+                    "reasoning": "Weekend consumption aggregated at the feeder level; does not contain personal identifiers.",
+                    "DPV_evidence": [
+                        {
+                            "source": "DPV",
+                            "concept_uri": "https://w3id.org/dpv#AggregatedData"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+]
