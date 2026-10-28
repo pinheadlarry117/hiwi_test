@@ -27,6 +27,22 @@ def load_ontology_json(json_file):
 
 
 
+def load_ontology_rdf(ontology_file):
+    g = Graph()
+
+    # Auto-detect format from file extension
+    g.parse(ontology_file)
+
+    ontology_context = []
+
+    for s, p, o in g:
+        ontology_context.append({
+            "subject": str(s),
+            "predicate": str(p),
+            "object": str(o)
+        })
+
+    return ontology_context
 
 """
 def load_ontology(ontology_file, max_triples=500):
@@ -147,7 +163,7 @@ def analyze_columns(
     table_preview = preview.to_dict(orient="records")
     column_names = data.columns.tolist()
 
-    ontology_context = load_ontology_json(ontology_file)
+    ontology_context = load_ontology_rdf(ontology_file)
 
     prompt = get_prompt(
         column_names=column_names,
@@ -239,7 +255,7 @@ def main():
 
     results_df = analyze_columns(
         input_file=INPUT_FILE,
-        ontology_file=r"C:\Users\yga-hzh\Downloads\hiwi\hiwi_test\data\output\pd.json",
+        ontology_file=r"C:\Users\yga-hzh\Downloads\hiwi\hiwi_test\data\input\pd-owl.rdf",
         base_url=BASE_URL,
         api_key=API_KEY,
         models=MODELS
