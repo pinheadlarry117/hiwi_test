@@ -1,0 +1,24 @@
+[
+    {
+        "model": "mistral-small-4-119b-2603",
+        "response": {
+            "ontology_summary": {
+                "classes": 110,
+                "properties": 100,
+                "description": "The ontology context describes a Data Privacy Vocabulary (DPV) extension focused on personal data categories. It includes classes and properties related to various types of personal data such as biometric, demographic, financial, health, and behavioral data. The ontology also includes metadata about contributors, creation dates, and definitions for each term. The context is structured using RDF/OWL standards and includes references to external vocabularies and standards."
+            }
+        }
+    },
+    {
+        "model": "qwen3.8-27b",
+        "response": {
+            "raw_response": null
+        }
+    },
+    {
+        "model": "gpt-oss-120b",
+        "response": {
+            "raw_response": "ERROR: Error code: 400 - {'error': {'message': \"Input length (182790) exceeds model's maximum context length (131072).\", 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+        }
+    }
+]

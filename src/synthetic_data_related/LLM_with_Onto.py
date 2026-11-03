@@ -16,7 +16,7 @@ def load_data(input_file, nrows_preview=10):
     return data, preview
 
 
-
+"""
 def load_ontology_json(json_file):
     json_file = Path(json_file)
 
@@ -24,7 +24,7 @@ def load_ontology_json(json_file):
         ontology = json.load(f)
 
     return ontology
-
+"""
 
 
 def load_ontology_rdf(ontology_file):
@@ -111,6 +111,7 @@ Return ONLY valid JSON in this format:
 
 Do not return markdown.
 Do not return explanations outside the JSON.
+
 
 
 """
@@ -242,7 +243,7 @@ def save_results(df, output_file):
 def main():
 
     INPUT_FILE = "data/input/feeder_metadata.csv"
-    OUTPUT_FILE = "data/output/with_onto/anonymization_analysis_test_with_onto_18.json"
+    OUTPUT_FILE = "data/output/with_onto/anonymization_analysis_test_with_onto_22.json"
 
     MODELS = [
         "mistral-small-4-119b-2603",
