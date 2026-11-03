@@ -1,0 +1,297 @@
+[
+    {
+        "model": "mistral-small-4-119b-2603",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 90,
+                    "anonymization_need": "Yes",
+                    "reasoning": "Feeder data can potentially identify specific infrastructure or geographic areas within an energy grid, which may be considered personal or sensitive information in certain contexts. Anonymization is recommended to prevent re-identification of individuals or groups associated with specific feeders.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Location"
+                        }
+                    ]
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 90,
+                    "anonymization_need": "Yes",
+                    "reasoning": "Substation data can reveal specific locations or infrastructure details within an energy grid, which may be considered sensitive information. Anonymization is recommended to prevent re-identification of individuals or groups associated with specific substations.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Location"
+                        }
+                    ]
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Date information is generally not considered personal data unless it can be linked to an individual. In this context, it appears to be a temporal reference for energy consumption data and does not directly identify individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "http://www.w3.org/2006/time#TemporalEntity"
+                        }
+                    ]
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 85,
+                    "anonymization_need": "Yes",
+                    "reasoning": "Housing units count can reveal information about population density or specific residential areas, which may be considered sensitive information. Anonymization is recommended to prevent re-identification of individuals or groups in specific geographic areas.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Demographic"
+                        }
+                    ]
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 85,
+                    "anonymization_need": "Yes",
+                    "reasoning": "Industry and commerce count can reveal information about economic activity in specific areas, which may be considered sensitive information. Anonymization is recommended to prevent re-identification of specific commercial or industrial zones.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Demographic"
+                        }
+                    ]
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Storage heaters kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Heat pumps kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Electric heaters kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Hot water tanks kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Flow-type heaters kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "EV chargers kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Public lighting kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Other consumers kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Batteries kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "PV systems kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "CHP kW is a technical measurement of energy infrastructure capacity and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyInfrastructure"
+                        }
+                    ]
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "General energy consumption kWh is a technical measurement of energy usage and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Workdays energy consumption kWh is a technical measurement of energy usage and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Evening energy consumption kWh is a technical measurement of energy usage and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Continuous energy consumption kWh is a technical measurement of energy usage and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Shop/hairdresser energy consumption kWh is a technical measurement of energy usage and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Bakery energy consumption kWh is a technical measurement of energy usage and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "Weekend energy consumption kWh is a technical measurement of energy usage and does not directly identify individuals or contain personal information.",
+                    "ontology_evidence": [
+                        {
+                            "source": "energy_ontology",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#EnergyConsumption"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "model": "qwen3.8-27b",
+        "response": {
+            "raw_response": null
+        }
+    },
+    {
+        "model": "gpt-oss-120b",
+        "response": {
+            "raw_response": "ERROR: Error code: 400 - {'error': {'message': \"Input length (182181) exceeds model's maximum context length (131072).\", 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+        }
+    }
+]

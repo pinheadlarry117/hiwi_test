@@ -1,0 +1,297 @@
+[
+    {
+        "model": "mistral-small-4-119b-2603",
+        "response": {
+            "columns": [
+                {
+                    "column": "feeder",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The feeder column represents a unique identifier for a specific feeder line in the electrical grid. It does not directly relate to personal or sensitive data about individuals, and thus does not require anonymization.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Identifier"
+                        }
+                    ]
+                },
+                {
+                    "column": "substation",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The substation column represents a unique identifier for a substation in the electrical grid. It does not directly relate to personal or sensitive data about individuals, and thus does not require anonymization.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Identifier"
+                        }
+                    ]
+                },
+                {
+                    "column": "date",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The date column represents a temporal attribute and does not directly relate to personal or sensitive data about individuals. It is not considered personal data under privacy regulations.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#"
+                        }
+                    ]
+                },
+                {
+                    "column": "housing_units_count",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The housing_units_count column represents the number of housing units connected to a feeder. It is aggregate data and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Demographic"
+                        }
+                    ]
+                },
+                {
+                    "column": "industry_and_commerce_count",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The industry_and_commerce_count column represents the number of industry and commerce units connected to a feeder. It is aggregate data and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#Demographic"
+                        }
+                    ]
+                },
+                {
+                    "column": "storage_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The storage_heaters_kW column represents the total capacity of storage heaters in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "heat_pumps_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The heat_pumps_kW column represents the total capacity of heat pumps in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "electric_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The electric_heaters_kW column represents the total capacity of electric heaters in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "hot_water_tanks_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The hot_water_tanks_kW column represents the total capacity of hot water tanks in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "flow-type_heaters_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The flow-type_heaters_kW column represents the total capacity of flow-type heaters in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "EV_chargers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The EV_chargers_kW column represents the total capacity of electric vehicle chargers in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "public_lighting_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The public_lighting_kW column represents the total capacity of public lighting in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "other_consumers_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The other_consumers_kW column represents the total capacity of other consumers in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "batteries_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The batteries_kW column represents the total capacity of batteries in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "PV_systems_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The PV_systems_kW column represents the total capacity of photovoltaic systems in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "chp_kW",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The chp_kW column represents the total capacity of combined heat and power systems in kilowatts. It is technical data related to energy infrastructure and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "g0_general_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The g0_general_kWh column represents general energy consumption in kilowatt-hours. It is aggregate technical data related to energy consumption and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "g1_workdays_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The g1_workdays_kWh column represents energy consumption on workdays in kilowatt-hours. It is aggregate technical data related to energy consumption and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "g2_evening_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The g2_evening_kWh column represents energy consumption in the evening in kilowatt-hours. It is aggregate technical data related to energy consumption and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "g3_continuous_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The g3_continuous_kWh column represents continuous energy consumption in kilowatt-hours. It is aggregate technical data related to energy consumption and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "g4_shop_hairdresser_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The g4_shop_hairdresser_kWh column represents energy consumption for shops and hairdressers in kilowatt-hours. It is aggregate technical data related to energy consumption and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "g5_bakery_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The g5_bakery_kWh column represents energy consumption for bakeries in kilowatt-hours. It is aggregate technical data related to energy consumption and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                },
+                {
+                    "column": "g6_weekend_kWh",
+                    "confidence_score": 10,
+                    "anonymization_need": "No",
+                    "reasoning": "The g6_weekend_kWh column represents energy consumption on weekends in kilowatt-hours. It is aggregate technical data related to energy consumption and does not relate to personal or sensitive information about individuals.",
+                    "ontology_evidence": [
+                        {
+                            "source": "pd",
+                            "concept_uri": "https://w3id.org/dpv/pd/owl#DeviceBased"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "model": "qwen3.8-27b",
+        "response": {
+            "raw_response": null
+        }
+    },
+    {
+        "model": "gpt-oss-120b",
+        "response": {
+            "raw_response": "ERROR: Error code: 400 - {'error': {'message': \"Input length (181986) exceeds model's maximum context length (131072).\", 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+        }
+    }
+]

@@ -101,7 +101,7 @@ Return ONLY valid JSON in this format:
       "reasoning": "reason",
       "ontology_evidence": [
         {{
-          "source": "energy_ontology",
+          "source": "pd",
           "concept_uri": "<verified concept URI>"
         }}
       ]
@@ -243,12 +243,11 @@ def save_results(df, output_file):
 def main():
 
     INPUT_FILE = "data/input/feeder_metadata.csv"
-    OUTPUT_FILE = "data/output/with_onto/anonymization_analysis_test_with_onto_22.json"
+    OUTPUT_FILE = "data/output/with_onto/anonymization_analysis_test_with_onto_34.json"
 
     MODELS = [
         "mistral-small-4-119b-2603",
-        "qwen3.8-27b",
-        "gpt-oss-120b"
+        "qwen3.8-27b"
     ]
 
     BASE_URL = "https://chat.kiconnect.nrw/api/v1"

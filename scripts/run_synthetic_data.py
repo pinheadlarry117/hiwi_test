@@ -4,7 +4,7 @@ from synthetic_data_related.synthetic_data import run_pipeline
 def main():
 
     results = run_pipeline(
-        input_file="data/input/feeder_metadata.csv",
+        input_file=r"C:\Users\yga-hzh\Downloads\hiwi\hiwi_test\test_results\original_data\SMX_original copy.csv",
         num_rows=20,
     )
 
